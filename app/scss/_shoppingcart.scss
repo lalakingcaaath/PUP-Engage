@@ -1,0 +1,54 @@
+.cart {
+    font-family: "Inter", sans-serif;
+    display: grid;
+    gap: 3rem;
+    margin: 4rem 2rem;
+
+    .unit-data {
+        background-color: lightgray;
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        gap: 7rem;
+
+        :nth-child(2) {
+            margin-left: auto;
+        }
+    }
+
+    .unit-deets {
+        background-color: lightgrey;
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        gap: 10rem;
+        align-items: center;
+
+        img {
+            border: 1px solid black;
+        }
+    }
+
+    .unit-checkout {
+        background-color: lightgrey;
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        align-items: center;
+
+        :nth-child(2) {
+            margin-left: auto;
+        }
+
+        button {
+            padding: 0.5rem;
+            background-color: #800000;
+            color: white;
+            border-width: 0px;
+            border-radius: 0.5rem;
+            font-family: "Inter", sans-serif;
+            cursor: pointer;
+        }
+    }
+}
