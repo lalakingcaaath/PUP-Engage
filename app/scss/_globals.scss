@@ -43,6 +43,23 @@ body {
       }
 }
   
+table {
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+table, th, td, caption {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+}
+
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr;

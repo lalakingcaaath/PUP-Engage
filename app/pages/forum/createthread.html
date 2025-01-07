@@ -6,41 +6,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/styles.css">
     <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
-    <title>Sign Up</title>
+    <title>Create Thread</title>
 </head>
 <body>
-    <header class="header-signup">
+    <header class="main-header">
         <nav>
             <ul>
-                <li><a href="/index.html"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
-                <li>PUP Engage</li>
-                <li>Sign Up</li>
+                <li><a href="/index.html"><img src="/app/img/PUPLogo.png" alt="PUP logo"></a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/app/pages/directory.html">Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.html">Calendar</a></li>
+                <li><a href="/app/pages/forum.html">Forum</a></li>
+                <li><a href="/app/pages/store/store.html">Store</a></li>
+                <li><a href="/app/pages/login.html">Sign In</a></li>
+                <li><a href="/app/pages/signup.html">Register</a></li>
             </ul>
         </nav>
     </header>
-    <section class="signup">
-        <div class="signup-content">
-            <div class="hero-text">
-                <img src="/app/img/PUPLogo.png" alt="PUP Logo">
-                <h2>PUP Engage: <br> Your Hub for Student Connections!</h2>
-            </div>
-            <div class="signup-form">
-                <form>
-                    <label for="fname">First Name</label>
-                    <input type="text" placeholder="Enter your first name" id="fname">
-                    <label for="lname">Last Name</label>
-                    <input type="text" placeholder="Enter your last name" id="lname">
-                    <label for="studentID">Student ID</label>
-                    <input type="text" placeholder="Enter your Student ID" id="studentID">
-                    <label for="email">Email</label>
-                    <input type="text" placeholder="Enter your email" name="email" id="email">
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Enter your password" name="password" id="password">
-                    <button type="submit">Register</button>
-                    <label for="checkbox"><input type="checkbox" name="checkbox" id="checkbox">I agree</label>
-                    <p>By checking you agree that you are a student at the Polytechnic University of the Philippines.</p>
-                </form>
-            </div>
+    <section class="create-thread">
+        <div class="thread-header">
+            <a href="/app/pages/forum.html"><img src="/app/img/icons8-back-96.png" alt="go back"></a>
+            <h1>Create post</h1>
+            <p>Drafts</p>
+        </div>
+        <div class="thread-options">
+            <button type="submit"class="option" data-type="text">Text</button>
+            <button type="submit"class="option" data-type="image">Images & Videos</button>
+            <button type="submit"class="option" data-type="link">Link</button>
+        </div>
+        <div class="thread-title">
+            <input type="text" placeholder="Title">
+        </div>
+        <div class="thread-post">
+            <textarea name="createPost" id="createPost" placeholder="Body"></textarea>
+            <button type="submit" class="highlight">Post</button>
         </div>
     </section>
     <footer>
@@ -50,7 +49,7 @@
                 <li><a href="/app/pages/directory.html">Organization Directory</a></li>
                 <li><a href="/app/pages/generalcalendar.html">Event Calendar</a></li>
                 <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="#">Mechandise Store</a></li>
+                <li><a href="/app/pages/store/store.html">Mechandise Store</a></li>
                 <li><a href="/app/pages/about.html">About Us</a></li>
             </ul>
         </div>
@@ -66,5 +65,6 @@
         </div>
         <p class="copyright">&copy; 2024 PUP Engage. All rights reserved</p>
     </footer>
+    <script src="/app/js/createthreadbutton.js"></script>
 </body>
 </html>

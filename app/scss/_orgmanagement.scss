@@ -1,0 +1,15 @@
+.content {
+    button {
+        border-width: 1px;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        font-family: "Inter", sans-serif;
+        cursor: pointer;
+        background-color: white;
+        border-color: black;
+    }
+    .highlight {
+        background-color: #800000;
+        color: white;
+    }
+}

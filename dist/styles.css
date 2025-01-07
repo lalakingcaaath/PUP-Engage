@@ -36,6 +36,23 @@ body {
   width: 4.5rem;
 }
 
+table {
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+table, th, td, caption {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center;
+}
+
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -834,4 +851,479 @@ footer .copyright {
 .main-content .content .search input[type=text] {
   width: 75%;
   padding: 1rem;
+}
+
+.content button {
+  border-width: 1px;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  background-color: white;
+  border-color: black;
+}
+.content .highlight {
+  background-color: #800000;
+  color: white;
+}
+
+.event-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
+}
+.event-content .event-deets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.event-content .event-deets input, .event-content .event-deets select {
+  width: 75%;
+  padding: 0.5rem;
+}
+.event-content .upload-banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.event-content .upload-banner-container .banner-placeholder {
+  width: 100%;
+  max-width: 500px;
+  height: 150px;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+}
+.event-content .upload-banner-container .banner-placeholder .upload-icon {
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+}
+
+.item-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
+}
+.item-content .item-deets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.item-content .item-deets input, .item-content .item-deets select {
+  width: 75%;
+  padding: 0.5rem;
+}
+.item-content .upload-banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.item-content .upload-banner-container .banner-placeholder {
+  width: 100%;
+  max-width: 500px;
+  height: 150px;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+}
+.item-content .upload-banner-container .banner-placeholder .upload-icon {
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+}
+
+.item-approval {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.item-approval .item-card {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 1rem;
+  width: 25%;
+}
+.item-approval .item-card .item {
+  display: grid;
+  border: 1px solid #D9D9D9;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.item-approval .item-card .item a {
+  display: grid;
+  place-items: center;
+}
+.item-approval .item-card .item a img {
+  width: 75%;
+}
+.item-approval .item-card .item strong {
+  margin-top: 1rem;
+}
+.item-approval .item-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+.item-approval .item-button button {
+  border-width: 1px;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  background-color: white;
+  border-color: black;
+}
+.item-approval .item-button .highlight {
+  background-color: #800000;
+  color: white;
+}
+
+.reported-content {
+  display: flex;
+  justify-content: center;
+  background-color: lightgray;
+  padding: 1rem;
+  gap: 20rem;
+  margin-bottom: 1.25rem;
+  margin-inline: 5rem;
+}
+.reported-content .post {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.reported-container {
+  margin-left: 5rem;
+  margin-bottom: 1.25rem;
+}
+
+.org-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.org-details .image-upload {
+  position: relative;
+  display: inline-block;
+}
+.org-details .image-upload label {
+  cursor: pointer;
+}
+.org-details .image-upload label img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.org-details .image-upload input[type=file] {
+  display: none;
+}
+.org-details input {
+  padding: 0.5rem;
+  width: 25%;
+}
+
+.general-calendar {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.forum {
+  font-family: "Inter", sans-serif;
+}
+.forum .forum-hero {
+  position: relative;
+  height: 50vh;
+  display: grid;
+  place-items: center;
+}
+.forum .forum-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/app/img/forumhero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+.forum .forum-hero .forum-hero-content {
+  position: relative;
+  text-align: center;
+}
+.forum .forum-hero .forum-hero-content h1 {
+  font-size: 3rem;
+  padding-inline: 5rem;
+}
+.forum .forum-hero .forum-hero-content input {
+  font-family: "Inter", sans-serif;
+  padding: 1rem;
+  width: 100%;
+}
+.forum .forum-content {
+  margin: 3rem 5rem;
+}
+.forum .forum-content .forum-info {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.forum .forum-content .forum-info .info-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.forum .forum-content .forum-info .info-card img {
+  height: 2.5rem;
+}
+.forum .forum-welcome {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+.forum .forum-welcome .forum-card {
+  background-color: lightgrey;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.forum .forum-welcome .forum-card .forum-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.forum .forum-welcome .forum-card h3 {
+  margin: 0;
+}
+.forum .forum-welcome .forum-card a {
+  font-weight: 300;
+  color: black;
+  text-decoration: none;
+}
+.forum .forum-welcome .forum-card .column-card a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.forum .forum-welcome .forum-card .column-card img {
+  height: 2.5rem;
+}
+.forum .forum-posts .post-header {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+.forum .forum-posts .forum-body {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+.forum .forum-posts .forum-body .posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.forum .forum-posts .forum-body .posts-container a {
+  text-decoration: none;
+  color: black;
+}
+.forum .forum-posts .forum-body .posts-container .post-card {
+  background-color: lightgray;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.forum .forum-posts .forum-body .posts-container .post-card p {
+  margin: 0.5rem 0;
+}
+.forum .forum-posts .forum-body .posts-container .post-card .post-card-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.forum .forum-posts .forum-body .posts-container .post-card .post-card-info img {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.forum .forum-posts .forum-body .posts-container .post-card .post-card-info .post-card-info-text {
+  display: flex;
+  flex-direction: column;
+}
+.forum .forum-posts .forum-body .posts-container .post-card .post-stats {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-left: 4rem;
+}
+.forum .forum-posts .forum-body .posts-container .post-card .post-stats img {
+  height: 1rem;
+}
+.forum .forum-posts .forum-body .posts-container .post-card .post-stats a {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-decoration: none;
+  color: black;
+}
+.forum .forum-posts .forum-body .posts-container .post-card .post-stats a span {
+  background-color: #ddd;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.forum .forum-posts .forum-body .thread-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-inline: 4rem;
+  margin-top: 1rem;
+}
+.forum .forum-posts .forum-body .thread-card .post-thread {
+  background-color: lightgray;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  height: 10%;
+}
+.forum .forum-posts .forum-body .thread-card .post-thread a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.forum .forum-posts .forum-body .thread-card .post-thread a img {
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.getting-started .getting-started-content {
+  font-family: "Noto Sans ", sans-serif;
+  margin: 2rem 3rem;
+}
+.getting-started .getting-started-content h1, .getting-started .getting-started-content h2 {
+  color: #800000;
+}
+
+.create-thread {
+  margin: 2rem 3rem;
+  font-family: "Noto Sans", sans-serif;
+}
+.create-thread .thread-header {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.create-thread .thread-header p {
+  margin-left: auto;
+}
+.create-thread .thread-header a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  place-items: center;
+}
+.create-thread .thread-header a img {
+  height: 1.5rem;
+}
+.create-thread .thread-options .option {
+  padding: 0.5rem;
+  border: 0;
+  background-color: white;
+  cursor: pointer;
+  transition: border-bottom 0.2s ease, color 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+.create-thread .thread-options .option.active {
+  border-bottom: 2px solid #007bff;
+}
+.create-thread .thread-title {
+  margin: 1rem 0;
+}
+.create-thread .thread-title input {
+  font-family: "Inter", sans-serif;
+  font-size: medium;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 50%;
+}
+.create-thread .thread-options {
+  display: flex;
+  gap: 0.5rem;
+}
+.create-thread .thread-options .option {
+  padding: 0.5rem;
+  border: 0;
+  background-color: white;
+  cursor: pointer;
+  transition: border-bottom 0.2s ease, color 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+.create-thread .thread-options .option.active {
+  border-bottom: 2px solid #800000;
+  color: #800000;
+}
+.create-thread .thread-post {
+  display: flex;
+  flex-direction: column;
+}
+.create-thread .thread-post textarea {
+  font-family: "Inter", sans-serif;
+  font-size: small;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  height: 10rem;
+  padding: 1rem;
+}
+.create-thread .thread-post .highlight {
+  width: 4rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  background-color: #800000;
+  color: white;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.create-thread .thread-post .highlight:hover {
+  background-color: #a00000;
+}
+.create-thread .thread-post input[type=file],
+.create-thread .thread-post input[type=url] {
+  font-family: "Inter", sans-serif;
+  font-size: small;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
