@@ -3,45 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/styles.css">
     <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
-    <title>Home</title>
+    <title>Login</title>
 </head>
 <body>
-    <header class="main-header">
+    <header class="header-login">
         <nav>
             <ul>
-                <li><a href="/index.html"><img src="/app/img/PUPLogo.png" alt="PUP logo"></a></li>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/app/pages/directory.html">Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.html">Calendar</a></li>
-                <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="/app/pages/store/store.html">Store</a></li>
-                <li><a href="/app/pages/login.html">Sign In</a></li>
-                <li><a href="/app/pages/signup.html">Register</a></li>
+                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
+                <li>PUP Engage</li>
+                <li>Log In</li>
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to PUP Engage: <br> Your Hub for Student Connections!</h1>
-            <p>Explore organizations, join events, collaborate, and grow as a community.</p>
-            <a href="/app/pages/cms/dashboard.html"><button>Explore Now</button></a>
-            <a href="/app/pages/login.html"><button class="highlight">Join Us</button></a>
+    <section class="login">
+        <div class="login-content">
+            <div class="hero-text">
+                <img src="/app/img/PUPLogo.png" alt="PUP Logo">
+                <h2>PUP Engage: <br> Your Hub for Student Connections!</h2>
+            </div>
+            <div class="login-form">
+                <form>
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Enter your email" name="email" id="email">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" name="password" id="password">
+                    <button type="submit">Sign In</button>
+                </form>
+                <a href="/app/pages/reset.html">Forgot password?</a>
+            </div>
         </div>
     </section>
     <footer>
         <div class="links">
             <ul>
                 <li>Quick Links</li>
-                <li><a href="/app/pages/directory.html">Organization Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.html">Event Calendar</a></li>
-                <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="/app/pages/store/store.html">Mechandise Store</a></li>
-                <li><a href="/app/pages/about.html">About Us</a></li>
+                <li><a href="/app/pages/directory.php">Organization Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.php">Event Calendar</a></li>
+                <li><a href="/app/pages/forum.php">Forum</a></li>
+                <li><a href="#">Mechandise Store</a></li>
+                <li><a href="/app/pages/about.php">About Us</a></li>
             </ul>
         </div>
         <div class="socmed">

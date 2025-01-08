@@ -3,37 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/styles.css">
     <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
-    <title>Event Calendar</title>
+    <title>Home</title>
 </head>
 <body>
     <header class="main-header">
         <nav>
             <ul>
-                <li><a href="/index.html"><img src="/app/img/PUPLogo.png" alt="PUP logo"></a></li>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/app/pages/directory.html">Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.html">Calendar</a></li>
-                <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="/app/pages/store/store.html">Store</a></li>
-                <li><a href="/app/pages/login.html">Sign In</a></li>
-                <li><a href="/app/pages/signup.html">Register</a></li>
+                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP logo"></a></li>
+                <li><a href="/index.php">Home</a></li>
+                <li><a href="/app/pages/directory.php">Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.php">Calendar</a></li>
+                <li><a href="/app/pages/forum.php">Forum</a></li>
+                <li><a href="/app/pages/store/store.php">Store</a></li>
+                <li><a href="/app/pages/login.php">Sign In</a></li>
+                <li><a href="/app/pages/signup.php">Register</a></li>
             </ul>
         </nav>
     </header>
-    <section class="general-calendar">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FManila&mode=MONTH&showPrint=0&src=MzA2ODU1MTRkZDUxMDUyZWE3NjA5OTFiNWFjMWNmNGUxOTc1MWUwZTY4MzJjYmZlNjAzMjU2NjQxNTU0ZDA0YUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237CB342" style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no"></iframe>    </section>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to PUP Engage: <br> Your Hub for Student Connections!</h1>
+            <p>Explore organizations, join events, collaborate, and grow as a community.</p>
+            <a href="/app/pages/cms/dashboard.php"><button>Explore Now</button></a>
+            <a href="/app/pages/login.php"><button class="highlight">Join Us</button></a>
+        </div>
+    </section>
     <footer>
         <div class="links">
             <ul>
                 <li>Quick Links</li>
-                <li><a href="/app/pages/directory.html">Organization Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.html">Event Calendar</a></li>
-                <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="/app/pages/store/store.html">Mechandise Store</a></li>
-                <li><a href="/app/pages/about.html">About Us</a></li>
+                <li><a href="/app/pages/directory.php">Organization Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.php">Event Calendar</a></li>
+                <li><a href="/app/pages/forum.php">Forum</a></li>
+                <li><a href="/app/pages/store/store.php">Mechandise Store</a></li>
+                <li><a href="/app/pages/about.php">About Us</a></li>
             </ul>
         </div>
         <div class="socmed">

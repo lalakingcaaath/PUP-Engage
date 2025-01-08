@@ -12,7 +12,7 @@
     <header class="subheader">
         <nav>
             <ul>
-                <li><a href="/index.html"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
+                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
                 <li>PUP Engage</li>
                 <li>Checkout</li>
             </ul>
@@ -56,11 +56,11 @@
         <div class="links">
             <ul>
                 <li>Quick Links</li>
-                <li><a href="/app/pages/directory.html">Organization Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.html">Event Calendar</a></li>
-                <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="/app/pages/store/store.html">Mechandise Store</a></li>
-                <li><a href="/app/pages/about.html">About Us</a></li>
+                <li><a href="/app/pages/directory.php">Organization Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.php">Event Calendar</a></li>
+                <li><a href="/app/pages/forum.php">Forum</a></li>
+                <li><a href="/app/pages/store/store.php">Mechandise Store</a></li>
+                <li><a href="/app/pages/about.php">About Us</a></li>
             </ul>
         </div>
         <div class="socmed">

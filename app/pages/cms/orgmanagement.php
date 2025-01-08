@@ -12,7 +12,7 @@
     <header class="subheader">
         <nav>
             <ul>
-                <li><a href="/index.html"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
+                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
                 <li>PUP Engage</li>
                 <li>Organization Management</li>
             </ul>
@@ -25,25 +25,25 @@
                 <h2>Admin</h2>
             </div>
             <ul>
-                <a href="/app/pages/cms/dashboard.html">
+                <a href="/app/pages/cms/dashboard.php">
                     <li>Dashboard</li>
                 </a>
-                <a href="/app/pages/cms/usermanagement.html">
+                <a href="/app/pages/cms/usermanagement.php">
                     <li>User Management</li>
                 </a>
-                <a href="/app/pages/cms/orgmanagement.html">
+                <a href="/app/pages/cms/orgmanagement.php">
                     <li>Organization Management</li>
                 </a>
-                <a href="/app/pages/cms/eventmanagement.html">
+                <a href="/app/pages/cms/eventmanagement.php">
                     <li>Event Management</li>
                 </a>
-                <a href="/app/pages/cms/forummoderation.html">
+                <a href="/app/pages/cms/forummoderation.php">
                     <li>Forum Moderation</li>
                 </a>
-                <a href="/app/pages/cms/merchandiseapproval.html">
+                <a href="/app/pages/cms/merchandiseapproval.php">
                     <li>Merchandise Approvals</li>
                 </a>
-                <a href="/app/pages/cms/report.html">
+                <a href="/app/pages/cms/report.php">
                     <li>Reports</li>
                 </a>
             </ul>
@@ -53,40 +53,29 @@
                 <img src="/app/img/icons8-community-96.png" alt="organization">
                 <h2>Organization Management</h2>
             </div>
-            <div class="org-details">
-                <div class="image-upload">
-                    <label for="file-input">
-                        <img src="placeholder.jpg" alt="Upload Image" id="image-preview">
-                    </label>
-                    <input id="file-input" type="file" accept="image/*">
-                </div>                
-                <label for="orgName">Organization Name</label>
-                <input type="text" name="orgName" id="orgName" placeholder="The Programmers Guild">
-                <label for="orgDeets">Description</label>
-                <input type="text" name="orgDeets" id="orgDeets" placeholder="Description of Org">
-                <label for="orgEmail">Organization Email</label>
-                <input type="email" name="orgEmail" id="orgEmail" placeholder="tpgpupmain@gmail.com">
+            <div class="search">
+                <input type="text" placeholder="Search for organizations">
             </div>
             <table>
-                <caption>Member List</caption>
+                <caption>Organization List</caption>
                 <tr>
                     <th></th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
+                    <th>ID</th>
+                    <th>Organization Name</th>
                     <th>Status</th>
-                    <th>Date Joined</th>
+                    <th>No. of members</th>
+                    <th>Date created</th>
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>Diana Khyle Padullo</td>
-                    <td>madamdayana@gmail.com</td>
-                    <td>Moderator</td>
+                    <td>TPG</td>
+                    <td>The Programmers' Guild</td>
                     <td>Active</td>
+                    <td>10</td>
                     <td>October 23, 2024</td>
                 </tr>
             </table>
-                <a href="#"><button class="highlight">Add member</button></a>
+                <a href="/app/pages/cms/details/addorg.php"><button class="highlight">Add organization</button></a>
                 <a href="#"><button>Remove</button></a>
         </div>
     </section>
@@ -94,11 +83,11 @@
         <div class="links">
             <ul>
                 <li>Quick Links</li>
-                <li><a href="/app/pages/directory.html">Organization Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.html">Event Calendar</a></li>
-                <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="/app/pages/store/store.html">Mechandise Store</a></li>
-                <li><a href="/app/pages/about.html">About Us</a></li>
+                <li><a href="/app/pages/directory.php">Organization Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.php">Event Calendar</a></li>
+                <li><a href="/app/pages/forum.php">Forum</a></li>
+                <li><a href="/app/pages/store/store.php">Mechandise Store</a></li>
+                <li><a href="/app/pages/about.php">About Us</a></li>
             </ul>
         </div>
         <div class="socmed">
@@ -113,6 +102,5 @@
         </div>
         <p class="copyright">&copy; 2024 PUP Engage. All rights reserved</p>
     </footer>
-    <script src="/app/js/uploadorglogo.js"></script>
 </body>
 </html>

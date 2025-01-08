@@ -6,45 +6,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/styles.css">
     <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
-    <title>Login</title>
+    <title>Event Calendar</title>
 </head>
 <body>
-    <header class="header-login">
+    <header class="main-header">
         <nav>
             <ul>
-                <li><a href="/index.html"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
-                <li>PUP Engage</li>
-                <li>Log In</li>
+                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP logo"></a></li>
+                <li><a href="/index.php">Home</a></li>
+                <li><a href="/app/pages/directory.php">Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.php">Calendar</a></li>
+                <li><a href="/app/pages/forum.php">Forum</a></li>
+                <li><a href="/app/pages/store/store.php">Store</a></li>
+                <li><a href="/app/pages/login.php">Sign In</a></li>
+                <li><a href="/app/pages/signup.php">Register</a></li>
             </ul>
         </nav>
     </header>
-    <section class="login">
-        <div class="login-content">
-            <div class="hero-text">
-                <img src="/app/img/PUPLogo.png" alt="PUP Logo">
-                <h2>PUP Engage: <br> Your Hub for Student Connections!</h2>
-            </div>
-            <div class="login-form">
-                <form>
-                    <label for="email">Email</label>
-                    <input type="text" placeholder="Enter your email" name="email" id="email">
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Enter your password" name="password" id="password">
-                    <button type="submit">Sign In</button>
-                </form>
-                <a href="/app/pages/reset.html">Forgot password?</a>
-            </div>
-        </div>
-    </section>
+    <section class="general-calendar">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FManila&mode=MONTH&showPrint=0&src=MzA2ODU1MTRkZDUxMDUyZWE3NjA5OTFiNWFjMWNmNGUxOTc1MWUwZTY4MzJjYmZlNjAzMjU2NjQxNTU0ZDA0YUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237CB342" style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no"></iframe>    </section>
     <footer>
         <div class="links">
             <ul>
                 <li>Quick Links</li>
-                <li><a href="/app/pages/directory.html">Organization Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.html">Event Calendar</a></li>
-                <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="#">Mechandise Store</a></li>
-                <li><a href="/app/pages/about.html">About Us</a></li>
+                <li><a href="/app/pages/directory.php">Organization Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.php">Event Calendar</a></li>
+                <li><a href="/app/pages/forum.php">Forum</a></li>
+                <li><a href="/app/pages/store/store.php">Mechandise Store</a></li>
+                <li><a href="/app/pages/about.php">About Us</a></li>
             </ul>
         </div>
         <div class="socmed">

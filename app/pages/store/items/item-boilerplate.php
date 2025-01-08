@@ -12,14 +12,14 @@
     <header class="main-header">
         <nav>
             <ul>
-                <li><a href="/index.html"><img src="/app/img/PUPLogo.png" alt="PUP logo"></a></li>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/app/pages/directory.html">Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.html">Calendar</a></li>
-                <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="/app/pages/store/store.html">Store</a></li>
-                <li><a href="/app/pages/login.html">Sign In</a></li>
-                <li><a href="/app/pages/signup.html">Register</a></li>
+                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP logo"></a></li>
+                <li><a href="/index.php">Home</a></li>
+                <li><a href="/app/pages/directory.php">Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.php">Calendar</a></li>
+                <li><a href="/app/pages/forum.php">Forum</a></li>
+                <li><a href="/app/pages/store/store.php">Store</a></li>
+                <li><a href="/app/pages/login.php">Sign In</a></li>
+                <li><a href="/app/pages/signup.php">Register</a></li>
             </ul>
         </nav>
     </header>
@@ -133,11 +133,11 @@
         <div class="links">
             <ul>
                 <li>Quick Links</li>
-                <li><a href="/app/pages/directory.html">Organization Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.html">Event Calendar</a></li>
-                <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="/app/pages/store/store.html">Mechandise Store</a></li>
-                <li><a href="/app/pages/about.html">About Us</a></li>
+                <li><a href="/app/pages/directory.php">Organization Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.php">Event Calendar</a></li>
+                <li><a href="/app/pages/forum.php">Forum</a></li>
+                <li><a href="/app/pages/store/store.php">Mechandise Store</a></li>
+                <li><a href="/app/pages/about.php">About Us</a></li>
             </ul>
         </div>
         <div class="socmed">

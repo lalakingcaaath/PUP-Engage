@@ -6,15 +6,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/styles.css">
     <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
-    <title>Event Management</title>
+    <title>Merchandise Approvals</title>
 </head>
 <body>
     <header class="subheader">
         <nav>
             <ul>
-                <li><a href="/index.html"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
+                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
                 <li>PUP Engage</li>
-                <li>Event Management</li>
+                <li>Merchandise Approvals</li>
             </ul>
         </nav>
     </header>
@@ -25,25 +25,25 @@
                 <h2>Admin</h2>
             </div>
             <ul>
-                <a href="/app/pages/cms/dashboard.html">
+                <a href="/app/pages/cms/dashboard.php">
                     <li>Dashboard</li>
                 </a>
-                <a href="/app/pages/cms/usermanagement.html">
+                <a href="/app/pages/cms/usermanagement.php">
                     <li>User Management</li>
                 </a>
-                <a href="/app/pages/cms/orgmanagement.html">
+                <a href="/app/pages/cms/orgmanagement.php">
                     <li>Organization Management</li>
                 </a>
-                <a href="/app/pages/cms/eventmanagement.html">
+                <a href="/app/pages/cms/eventmanagement.php">
                     <li>Event Management</li>
                 </a>
-                <a href="/app/pages/cms/forummoderation.html">
+                <a href="/app/pages/cms/forummoderation.php">
                     <li>Forum Moderation</li>
                 </a>
-                <a href="/app/pages/cms/merchandiseapproval.html">
+                <a href="/app/pages/cms/merchandiseapproval.php">
                     <li>Merchandise Approvals</li>
                 </a>
-                <a href="/app/pages/cms/report.html">
+                <a href="/app/pages/cms/report.php">
                     <li>Reports</li>
                 </a>
             </ul>
@@ -51,31 +51,22 @@
         <div class="content">
             <div class="content-header">
                 <img src="/app/img/icons8-person-96.png" alt="dashboard">
-                <h2>Event Management</h2>
+                <h2>Merchandise Approvals</h2>
             </div>
-            <div class="event-content">
-                <div class="event-deets">
-                    <label for="eventName">Event Name</label>
-                    <input type="text" name="eventName" id="eventName" placeholder="Event Name">
-                    <label for="eventDesc">Event Description</label>
-                    <input type="text" name="eventDesc" id="eventDesc" placeholder="Event Description">
-                    <label for="eventType">Event Type</label>
-                    <select name="eventType" id="eventType">
-                        <option value="Online">Online</option>
-                        <option value="Physical">Physical</option>
-                    </select>                    
-                    <label for="orgDeets">Organizer Details</label>
-                    <input type="text" name="orgDeets" id="orgDeets" placeholder="Organizer Details">
-                    <label for="startDate">Start Date</label>
-                    <input type="date" name="startDate" id="startDate">
-                    <label for="endDate">End Date</label>
-                    <input type="date" name="endDate" id="endDate">
-                    <label for="startTime">Start Time</label>
-                    <input type="time" name="startTime" id="startTime">
-                    <label for="endTime">End Time</label>
-                    <input type="time" name="endTime" id="endTime">
-                    <label for="venue">Venue Location</label>
-                    <input type="text" name="venue" id="venue" placeholder="Virtual Meeting URL/Location">
+            <div class="item-content">
+                <div class="item-deets">
+                    <label for="item-name">Item Name</label>
+                    <input type="text" name="item-name" id="item-name" placeholder="Item Name">
+                    <label for="item-desc">Item Description</label>
+                    <input type="text" name="item-dexc" id="item-desc" placeholder="Item Description">
+                    <label for="item-price">Item Price</label>
+                    <input type="text" name="item-price" id="item-price" placeholder="Item Price">
+                    <label for="item-quantity">Item Quantity</label>
+                    <input type="text" name="item-quantity" id="item-quantity" placeholder="Item Quantity">
+                    <label for="vendor-name">Vendor Name</label>
+                    <input type="text" name="vendor-name" id="vendor-name" placeholder="Vendor Name">
+                    <label for="vendor-email">Vendor Email</label>
+                    <input type="text" name="vendor-email" id="vendor-email" placeholder="Vendor Email">
                 </div>
                 <div class="upload-banner-container">
                     <div class="banner-placeholder">
@@ -85,18 +76,18 @@
                     <p>Upload Event Banner</p>
                   </div>
             </div>
-            <button class="highlight">Add event</button>
+            <button class="highlight">Add Item</button>
         </div>
     </section>
     <footer>
         <div class="links">
             <ul>
                 <li>Quick Links</li>
-                <li><a href="/app/pages/directory.html">Organization Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.html">Event Calendar</a></li>
-                <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="/app/pages/store/store.html">Mechandise Store</a></li>
-                <li><a href="/app/pages/about.html">About Us</a></li>
+                <li><a href="/app/pages/directory.php">Organization Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.php">Event Calendar</a></li>
+                <li><a href="/app/pages/forum.php">Forum</a></li>
+                <li><a href="/app/pages/store/store.php">Mechandise Store</a></li>
+                <li><a href="/app/pages/about.php">About Us</a></li>
             </ul>
         </div>
         <div class="socmed">

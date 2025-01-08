@@ -12,7 +12,7 @@
     <header class="subheader">
         <nav>
             <ul>
-                <li><a href="/index.html"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
+                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
                 <li>PUP Engage</li>
                 <li>Forum Moderation</li>
             </ul>
@@ -25,25 +25,25 @@
                 <h2>Admin</h2>
             </div>
             <ul>
-                <a href="/app/pages/cms/dashboard.html">
+                <a href="/app/pages/cms/dashboard.php">
                     <li>Dashboard</li>
                 </a>
-                <a href="/app/pages/cms/usermanagement.html">
+                <a href="/app/pages/cms/usermanagement.php">
                     <li>User Management</li>
                 </a>
-                <a href="/app/pages/cms/orgmanagement.html">
+                <a href="/app/pages/cms/orgmanagement.php">
                     <li>Organization Management</li>
                 </a>
-                <a href="/app/pages/cms/eventmanagement.html">
+                <a href="/app/pages/cms/eventmanagement.php">
                     <li>Event Management</li>
                 </a>
-                <a href="/app/pages/cms/forummoderation.html">
+                <a href="/app/pages/cms/forummoderation.php">
                     <li>Forum Moderation</li>
                 </a>
-                <a href="/app/pages/cms/merchandiseapproval.html">
+                <a href="/app/pages/cms/merchandiseapproval.php">
                     <li>Merchandise Approvals</li>
                 </a>
-                <a href="/app/pages/cms/report.html">
+                <a href="/app/pages/cms/report.php">
                     <li>Reports</li>
                 </a>
             </ul>
@@ -95,11 +95,11 @@
         <div class="links">
             <ul>
                 <li>Quick Links</li>
-                <li><a href="/app/pages/directory.html">Organization Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.html">Event Calendar</a></li>
-                <li><a href="/app/pages/forum.html">Forum</a></li>
-                <li><a href="/app/pages/store/store.html">Mechandise Store</a></li>
-                <li><a href="/app/pages/about.html">About Us</a></li>
+                <li><a href="/app/pages/directory.php">Organization Directory</a></li>
+                <li><a href="/app/pages/generalcalendar.php">Event Calendar</a></li>
+                <li><a href="/app/pages/forum.php">Forum</a></li>
+                <li><a href="/app/pages/store/store.php">Mechandise Store</a></li>
+                <li><a href="/app/pages/about.php">About Us</a></li>
             </ul>
         </div>
         <div class="socmed">
