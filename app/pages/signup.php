@@ -1,3 +1,58 @@
+<?php 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect form data
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $studentID = $_POST['studentID'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Hash the password
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    // Database connection credentials
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "pup_engage";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("<script>alert('Connection failed: " . $conn->connect_error . "');</script>");
+    }
+
+    // Check for existing entry
+    $check_sql = "SELECT * FROM users WHERE studentID = ? OR email = ?";
+    $stmt = $conn->prepare($check_sql);
+    $stmt->bind_param("ss", $studentID, $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        echo "<script>alert('User with this Student ID or Email already exists');</script>";
+    } else {
+        // Prepare and bind
+        $stmt = $conn->prepare("INSERT INTO users (firstName, lastName, studentID, email, password) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssss", $fname, $lname, $studentID, $email, $hashed_password);
+
+        // Execute the statement
+        if ($stmt->execute() === TRUE) {
+            echo "<script>alert('You have been registered');</script>";
+        } else {
+            echo "<script>alert('Error: " . $stmt->error . "');</script>";
+        }
+    }
+
+    // Close the statement and connection
+    $stmt->close();
+    $conn->close();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,46 +80,27 @@
                 <h2>PUP Engage: <br> Your Hub for Student Connections!</h2>
             </div>
             <div class="signup-form">
-                <form>
+                <form method="POST" action="signup.php">
                     <label for="fname">First Name</label>
-                    <input type="text" placeholder="Enter your first name" id="fname">
+                    <input type="text" name="fname" placeholder="Enter your first name" id="fname" required>
                     <label for="lname">Last Name</label>
-                    <input type="text" placeholder="Enter your last name" id="lname">
+                    <input type="text" name="lname" placeholder="Enter your last name" id="lname" required>
                     <label for="studentID">Student ID</label>
-                    <input type="text" placeholder="Enter your Student ID" id="studentID">
+                    <input type="text" name="studentID" placeholder="Enter your Student ID" id="studentID" required>
                     <label for="email">Email</label>
-                    <input type="text" placeholder="Enter your email" name="email" id="email">
+                    <input type="text" name="email" placeholder="Enter your email" id="email" required>
                     <label for="password">Password</label>
-                    <input type="password" placeholder="Enter your password" name="password" id="password">
+                    <input type="password" name="password" placeholder="Enter your password" id="password" required>
                     <button type="submit">Register</button>
-                    <label for="checkbox"><input type="checkbox" name="checkbox" id="checkbox">I agree</label>
+                    <label for="checkbox"><input type="checkbox" name="checkbox" id="checkbox" required>I agree</label>
                     <p>By checking you agree that you are a student at the Polytechnic University of the Philippines.</p>
                 </form>
             </div>
         </div>
     </section>
-    <footer>
-        <div class="links">
-            <ul>
-                <li>Quick Links</li>
-                <li><a href="/app/pages/directory.php">Organization Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.php">Event Calendar</a></li>
-                <li><a href="/app/pages/forum.php">Forum</a></li>
-                <li><a href="#">Mechandise Store</a></li>
-                <li><a href="/app/pages/about.php">About Us</a></li>
-            </ul>
-        </div>
-        <div class="socmed">
-            <p class="touch">Keep in touch</p>
-            <a href="https://www.facebook.com/ThePUPOfficial"><img src="/app/img/icons8-facebook-logo-50.png" alt="facebook"></a>
-            <a href="https://x.com/ThePUPOfficial"><img src="/app/img/icons8-twitter-50.png" alt="twitter"></a>
-            <a href="https://www.youtube.com/user/pupcreatv"><img src="/app/img/icons8-youtube-50.png" alt="youtube"></a>
-            <a href="https://www.linkedin.com/school/polytechnic-university-of-the-philippines/posts/?feedView=all"><img src="/app/img/icons8-linkedin-50.png" alt="linkedin"></a>
-            <p class="info">PUP Contact Information</p>
-            <p>Phone: <span>(+63 2) 5335-1PUP (5335-1787) or 5335-1777</span></p>
-            <p>Email: <span>inquire@pup.edu.ph</span></p>
-        </div>
-        <p class="copyright">&copy; 2024 PUP Engage. All rights reserved</p>
-    </footer>
 </body>
 </html>
+
+<?php
+    include '../components/footer.php';
+?>

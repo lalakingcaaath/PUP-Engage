@@ -1326,4 +1326,87 @@ footer .copyright {
   border-radius: 0.5rem;
   height: 2.5rem;
   padding: 0.5rem;
+}
+
+.profile-page {
+  font-family: "Inter", sans-serif;
+}
+.profile-page .profile-card {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 5rem;
+}
+.profile-page .profile-card .cover-photo {
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+}
+.profile-page .profile-card .cover-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile-page .profile-card .profile-image {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: lightgrey;
+  padding: 1rem;
+}
+.profile-page .profile-card .profile-image .profile-image-container {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid black;
+}
+.profile-page .profile-card .profile-image .profile-image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile-page .profile-card .profile-image h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-size: 2.5rem;
+}
+.profile-page .about-card {
+  margin: 2rem 5rem;
+  padding: 1rem 2rem;
+  background-color: lightgray;
+}
+.profile-page .about-card .about-card-header {
+  display: flex;
+  flex-direction: row;
+}
+.profile-page .about-card .about-card-header button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  margin-left: auto;
+}
+.profile-page .about-card .edit-section {
+  display: none;
+}
+.profile-page .about-card .edit-section textarea {
+  margin-bottom: 1rem;
+}
+.profile-page .course-card {
+  margin: 2rem 5rem;
+  padding: 1rem 2rem;
+  background-color: lightgray;
+}
+.profile-page .course-card .course-card-header {
+  display: flex;
+  flex-direction: row;
+}
+.profile-page .course-card .course-card-header button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  margin-left: auto;
 }/*# sourceMappingURL=styles.css.map */
