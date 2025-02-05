@@ -1,0 +1,14 @@
+.main-content {
+    .content {
+        .search {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            
+            input[type=text] {
+                width: 75%;
+                padding: 1rem;
+            }
+        }
+    }
+}

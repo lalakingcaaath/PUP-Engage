@@ -1,0 +1,51 @@
+.store {
+    font-family: "Inter", sans-serif;
+
+    .search-store {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+        
+        input[type=text] {
+            width: 40%;
+            padding: 1rem;
+        }
+
+        a {
+            display: grid;
+            
+            button {
+                background-color: transparent;
+                border: 0px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .store-card {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        margin: 2rem 3rem;
+
+        .store-item {
+            display: grid;
+            border: 1px solid #D9D9D9;
+            border-radius: 0.5rem;
+            padding: 1rem;
+
+            a {
+                display: grid;
+                place-items: center;
+                
+                img {
+                    width: 75%;
+                }
+            }
+
+            strong {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

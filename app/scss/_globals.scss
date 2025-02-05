@@ -1,0 +1,110 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.subheader {
+    nav {
+        ul {
+          display: flex;
+          justify-content: flex-start; 
+          align-items: center; 
+          padding: 0; 
+          margin: 0; 
+          list-style-type: none;
+          width: 100%; 
+        }
+
+        ul li {
+          margin: 0.5rem 1.5rem; 
+          color: black;
+          font-family: "Cinzel", serif;
+          font-weight: bold;
+          font-size: 1.10rem;
+        }
+
+        ul li:last-child {
+            margin-left: auto;
+            font-family: "Noto Sans", sans-serif;
+        }
+
+        ul li img {
+          width: 4.5rem;
+        }
+      }
+}
+  
+table {
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+table, th, td, caption {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+}
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: "Inter", sans-serif;
+    color: #555555;
+    background-color: lightgray;
+    padding: 1rem 0rem;
+
+    .links {
+        margin-left: auto;
+        margin-right: 10rem;
+
+        ul {
+            list-style-type: none;
+            color: #800000;
+        }
+
+        li {
+            margin: 1rem 0rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #555555;
+        }
+    }
+
+    .socmed {
+
+        span {
+            font-weight: 500;
+        }
+
+        .touch {
+            text-transform: uppercase;
+            color: #800000;
+        }
+
+        .info {
+            color: #800000;
+        }
+    }
+
+    .copyright {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+  }

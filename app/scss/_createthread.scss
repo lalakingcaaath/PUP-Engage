@@ -1,0 +1,113 @@
+.create-thread {
+    margin: 2rem 3rem;
+    font-family: "Noto Sans", sans-serif;
+
+    .thread-header {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+
+        p {
+            margin-left: auto;
+        }
+
+        a {
+            display: flex;
+            text-decoration: none;
+            color: black;
+            place-items: center;
+            
+            img {
+                height: 1.5rem;
+            }
+        }
+    }
+
+    .thread-options {
+        .option {
+            padding: 0.5rem;
+            border: 0;
+            background-color: white;
+            cursor: pointer;
+            transition: border-bottom 0.2s ease, color 0.2s ease;
+            border-bottom: 2px solid transparent;
+
+            &.active {
+                border-bottom: 2px solid #007bff;
+            }
+        }
+    }
+
+    .thread-title {
+        margin: 1rem 0;
+        input {
+            font-family: "Inter", sans-serif;
+            font-size: medium;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 1rem;
+            padding: 1rem;
+            width: 50%;
+        }
+    }
+    .thread-options {
+        display: flex;
+        gap: 0.5rem;
+    
+        .option {
+            padding: 0.5rem;
+            border: 0;
+            background-color: white;
+            cursor: pointer;
+            transition: border-bottom 0.2s ease, color 0.2s ease;
+            border-bottom: 2px solid transparent;
+    
+            &.active {
+                border-bottom: 2px solid #800000;
+                color: #800000;
+            }
+        }
+    }
+    
+    .thread-post {
+        display: flex;
+        flex-direction: column;
+    
+        textarea {
+            font-family: "Inter", sans-serif;
+            font-size: small;
+            width: 50%;
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            height: 10rem;
+            padding: 1rem;
+        }
+    
+        .highlight {
+            width: 4rem;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            background-color: #800000;
+            color: white;
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: #a00000;
+            }
+        }
+    
+        input[type="file"],
+        input[type="url"] {
+            font-family: "Inter", sans-serif;
+            font-size: small;
+            width: 50%;
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            height: 2.5rem;
+            padding: 0.5rem;
+        }
+    }
+    
+}

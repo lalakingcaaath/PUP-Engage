@@ -1,0 +1,31 @@
+.org-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .image-upload {
+        position: relative;
+        display: inline-block;
+    
+        label {
+            cursor: pointer;
+    
+            img {
+                width: 10rem;
+                height: 10rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    
+        input[type="file"] {
+            display: none;
+        }
+    }
+    
+
+    input {
+        padding: 0.5rem;
+        width: 25%;
+    }
+}

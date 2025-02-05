@@ -1,0 +1,233 @@
+.forum {
+    font-family: "Inter", sans-serif;
+
+    .forum-hero {
+        position: relative;
+        height: 50vh;
+        display: grid;
+        place-items: center;
+    
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("/app/img/forumhero.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+        }
+
+        .forum-hero-content {
+            position: relative;
+            text-align: center;
+
+            h1 {
+                font-size: 3rem;
+                padding-inline: 5rem;
+            }
+
+            input {
+                font-family: "Inter", sans-serif;
+                padding: 1rem;
+                width: 100%;
+            }
+        }
+    }
+
+    .forum-content {
+        margin: 3rem 5rem;
+
+        .forum-info {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+
+            .info-card {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                align-items: center;
+
+                img {
+                    height: 2.5rem;
+                }
+            }
+        }
+    }
+
+    .forum-welcome {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 5rem;
+
+        .forum-card {
+            background-color: lightgrey;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .forum-items {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            h3 {
+                margin: 0;
+            }
+            
+            a {
+                font-weight: 300;
+                color: black;
+                text-decoration: none;
+            }
+
+            .column-card {
+
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1rem;   
+                }
+
+                img {
+                    height: 2.5rem;
+                }
+            }
+        }
+    }
+
+    .forum-posts {
+        .post-header {
+            display: flex;
+            gap: 20px;
+        
+            .filter-btn {
+                cursor: pointer;
+                font-weight: bold;
+                transition: color 0.3s ease-in-out;
+        
+                &.active {
+                    color: #ff4500; /* Highlight active filter */
+                }
+        
+                &:hover {
+                    color: #cc3700;
+                }
+            }
+        }
+
+        .forum-body {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        
+            .posts-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem; // Ensures spacing between cards
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+
+                .post-card {
+                    background-color: lightgray;
+                    border-radius: 0.5rem;
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+        
+                    p {
+                        margin: 0.5rem 0;
+                    }
+
+                    .post-card-info {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 2rem;
+
+                        img {
+                            width: 3rem;
+                            height: 3rem;
+                            border: 1px solid black;
+                            border-radius: 50%;
+                        }
+
+                        .post-card-info-text {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+        
+                    .post-stats {
+                        display: flex;
+                        gap: 0.5rem;
+                        margin-top: 0.5rem;     
+                        margin-left: 5rem;                   
+
+                        img {
+                            height: 1rem;
+                        }
+        
+                        a {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 1rem;
+                            text-decoration: none;
+                            color: black;
+
+                            span {
+                                background-color: #ddd;
+                                padding: 0.2rem 0.5rem;
+                                border-radius: 0.3rem;
+                                display: flex;
+                                align-items: center;
+                                gap: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .thread-card {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin-inline: 4rem;
+                margin-top: 1rem;
+        
+                .post-thread {
+                    background-color: lightgray;
+                    border-radius: 1rem;
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    height: 10%;
+        
+                    a {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        text-decoration: none;
+                        color: black;
+        
+                        img {
+                            height: 1.5rem;
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}

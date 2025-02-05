@@ -1,0 +1,41 @@
+.main-header {
+    nav {
+        ul {
+          display: flex;
+          justify-content: flex-start; 
+          align-items: center; 
+          padding: 0; 
+          margin: 0; 
+          list-style-type: none;
+          width: 100%; 
+        }
+      
+        ul li:first-child {
+          margin-right: auto; 
+        }
+    
+        ul li:nth-child(7) {
+            background-color: #800000;
+            padding: 0.5rem 1rem;
+    
+            a {
+                color: white;
+            }
+        }
+    
+        ul li {
+          margin: 0.5rem 1.5rem; 
+        }
+      
+        ul li a {
+          text-decoration: none; 
+          color: black;
+          font-family: "Cinzel", serif;
+          font-size: 1.10rem;
+        }
+    
+        ul li img {
+          width: 4.5rem;
+        }
+      }
+}

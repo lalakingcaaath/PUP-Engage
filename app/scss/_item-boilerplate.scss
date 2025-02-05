@@ -1,0 +1,130 @@
+.product-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #d3d3d3;
+  margin: 2rem;
+  font-family: "Inter", sans-serif;
+
+  .product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: white;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .product-details {
+    display: grid;
+    gap: 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .option-group {
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 0.5rem;
+
+      button {
+        padding: 0.5rem 1rem;
+        border: 1px solid #d9d9d9;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .quantity-control {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      input {
+        width: 5rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+
+    .add-to-cart {
+      background-color: white;
+      border: 1px solid black;
+      padding: 0.5rem;
+      height: 3rem;
+      cursor: pointer;
+    }
+
+    .buy-now {
+      background-color: #800000;
+      color: white;
+      padding: 0.5rem;
+      height: 3rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.desc-grp {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  font-family: "Inter", sans-serif;
+  gap: 3rem;
+  margin: 5rem 2rem;
+  
+
+  .desc-item {
+    background-color: lightgray;
+    padding: 1rem;
+
+    .seller {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+
+      .seller-img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      button {
+        background-color: white;
+        padding: 0.5rem;
+        border-width: 1px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
