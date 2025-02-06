@@ -1,3 +1,14 @@
+<?php 
+    session_start();
+
+    //Check if the user is logged in
+    if (isset($_SESSION['email'])) {
+        include '/laragon/www/pup-engage/app/components/header-loggedin.php';
+    } else {
+        include '/laragon/www/pup-engage/app/components/header-default.php';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,7 +78,7 @@
             <img src="/app/img/tpg-logo.jpg" alt="profile-image" class="seller-img">
             <div class="seller-desc">
               <h3>The Programmers' Guild</h3>
-              <a href="/app/pages/store/orgs/tpg.php"><button><img src="/app/img/icons8-store-24.png" alt="store">View Shop</button></a>
+              <a href="/app/pages/orgs/org-tpg.php"><button><img src="/app/img/icons8-store-24.png" alt="store">View Shop</button></a>
             </div>
           </div>
           <p>Joined: October 23, 2024</p>
@@ -76,3 +87,7 @@
       </section>
 </body>
 </html>
+
+<?php
+    include '/laragon/www/pup-engage/app/components/footer.php';
+?>
