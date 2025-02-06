@@ -1,3 +1,38 @@
+<?php
+// usermanagement.php
+session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$dbpassword = "";
+$dbname = "pup_engage";
+
+$conn = new mysqli($servername, $username, $dbpassword, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch all users
+$userQuery = "SELECT id, firstName, lastName, studentID, email, createdAt FROM users ORDER BY createdAt DESC";
+$userResult = $conn->query($userQuery);
+
+// Fetch forum statistics
+$userCountSQL = "SELECT COUNT(*) AS totalUsers FROM users";
+$userCountResult = $conn->query($userCountSQL);
+$userCount = $userCountResult->fetch_assoc()['totalUsers'];
+
+$postCountSQL = "SELECT COUNT(*) AS totalPosts FROM threads";
+$postCountResult = $conn->query($postCountSQL);
+$postCount = $postCountResult->fetch_assoc()['totalPosts'];
+
+$activeUserCount = 0;
+if (isset($_SESSION['online_users'])) {
+    $activeUserCount = count($_SESSION['online_users']);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,57 +94,55 @@
             <div class="card">
                 <div class="card-item">
                     <img src="/app/img/icons8-person-96.png" alt="users">
-                    <p>100</p>
-                    <p>Total registered users</p>
+                    <p><?php echo $userCount; ?></p>
+                    <p>Total Registered Users</p>
                 </div>
                 <div class="card-item">
-                    <img src="/app/img/icons8-add-user-96.png" alt="orgs">
-                    <p>35</p>
+                    <img src="/app/img/icons8-add-user-96.png" alt="active-users">
+                    <p><?php echo $activeUserCount; ?></p>
                     <p>Active Users</p>
                 </div>
                 <div class="card-item">
-                    <img src="/app/img/icons8-denied-96.png" alt="events">
-                    <p>35</p>
-                    <p>Inactive Users</p>
-                </div>
-                <div class="card-item">
-                    <img src="/app/img/icons8-registration-96.png" alt="sales">
-                    <p>35</p>
-                    <p>Recent Registrations</p>
+                    <img src="/app/img/icons8-registration-96.png" alt="posts">
+                    <p><?php echo $postCount; ?></p>
+                    <p>Total Posts</p>
                 </div>
             </div>
             <table>
                 <caption>User List</caption>
-                <tr>
-                    <th></th>
-                    <th>Username</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Status</th>
-                    <th>Date created</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>lalakingcaaath</td>
-                    <td>Jericho Pio</td>
-                    <td>piojericho@gmail.com</td>
-                    <td>Active</td>
-                    <td>January 10,2025</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>clarkyyy</td>
-                    <td>Clark John Mones</td>
-                    <td>clarkjohnmones@gmail.com</td>
-                    <td>Active</td>
-                    <td>December 13,2024</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Full Name</th>
+                        <th>Student Number</th>
+                        <th>Email</th>
+                        <th>Date Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if ($userResult->num_rows > 0) {
+                        while ($user = $userResult->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td>" . $user['id'] . "</td>";
+                            echo "<td>" . htmlspecialchars($user['firstName'] . ' ' . $user['lastName']) . "</td>";
+                            echo "<td>" . htmlspecialchars($user['studentID']) . "</td>";
+                            echo "<td>" . htmlspecialchars($user['email']) . "</td>";
+                            echo "<td>" . date("F j, Y, g:i a", strtotime($user['createdAt'])) . "</td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='5'>No users found.</td></tr>";
+                    }
+                    ?>
+                </tbody>
             </table>
         </div>
     </section>
+
+    <?php $conn->close(); ?>
+    <?php
+    include '/laragon/www/pup-engage/app/components/footer.php';
+    ?>
 </body>
 </html>
-
-<?php
-    include '/laragon/www/pup-engage/app/components/footer.php';
-?>
