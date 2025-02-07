@@ -475,6 +475,10 @@ footer .copyright {
 .directory .directory-card .directory-item img {
   width: 50%;
 }
+.directory .directory-card .directory-item a {
+  color: black;
+  text-decoration: none;
+}
 .directory .up {
   display: flex;
   justify-content: flex-end;
@@ -1364,6 +1368,7 @@ footer .copyright {
   gap: 2rem;
   background-color: lightgrey;
   padding: 1rem;
+  align-items: center;
 }
 .profile-page .profile-card .profile-image .profile-image-container {
   width: 10rem;
@@ -1379,42 +1384,23 @@ footer .copyright {
      object-fit: cover;
 }
 .profile-page .profile-card .profile-image h1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
   font-size: 2.5rem;
 }
-.profile-page .about-card {
-  margin: 2rem 5rem;
-  padding: 1rem 2rem;
-  background-color: lightgray;
-}
-.profile-page .about-card .about-card-header {
-  display: flex;
-  flex-direction: row;
-}
-.profile-page .about-card .about-card-header button {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
+.profile-page .profile-card .profile-image a {
+  text-decoration: none;
+  color: black;
   margin-left: auto;
 }
-.profile-page .about-card .edit-section {
-  display: none;
-}
-.profile-page .about-card .edit-section textarea {
-  margin-bottom: 1rem;
-}
-.profile-page .course-card {
+.profile-page .about-card, .profile-page .course-card, .profile-page .affiliation-card, .profile-page .project-card {
   margin: 2rem 5rem;
   padding: 1rem 2rem;
   background-color: lightgray;
 }
-.profile-page .course-card .course-card-header {
+.profile-page .about-card-header, .profile-page .course-card-header, .profile-page .affiliation-card-header, .profile-page .project-card-header {
   display: flex;
   flex-direction: row;
 }
-.profile-page .course-card .course-card-header button {
+.profile-page .about-card-header button, .profile-page .course-card-header button, .profile-page .affiliation-card-header button, .profile-page .project-card-header button {
   background-color: transparent;
   border: 0;
   cursor: pointer;
@@ -1659,4 +1645,33 @@ form button:hover {
 .actions button:hover {
   text-decoration: underline;
   background: #e6e6e6;
+}
+
+.edit-profile {
+  font-family: "Inter", sans-serif;
+  margin-inline: 10rem;
+}
+.edit-profile h1 {
+  text-align: center;
+}
+.edit-profile .edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.edit-profile .edit-form input,
+.edit-profile .edit-form textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.edit-profile .edit-form button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #800000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
