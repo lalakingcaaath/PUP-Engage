@@ -1,3 +1,38 @@
+<?php
+// Database Connection
+$servername = "localhost";
+$username = "root";
+$dbpassword = "";
+$dbname = "pup_engage";
+
+$conn = new mysqli($servername, $username, $dbpassword, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Mapping of org_id to their respective file names
+$org_files = [
+    1 => "orgtpu.php",   // The Programmers' Guild
+    2 => "orgpen.php",   // PUP Electrical Engineering Network
+    3 => "orgsets.php",  // Society of Engineering Technology Students
+    4 => "orgmsc.php",   // Microsoft Student Community
+    5 => "orghygr.php",  // PUP Hygears
+    6 => "orgeepw.php",  // Electrical Engineering - PUP Wired
+];
+
+// Query to fetch organizations and count their members
+$org_query = "SELECT 
+                o.id AS org_id, 
+                o.name AS org_name, 
+                o.established_date, 
+                (SELECT COUNT(*) FROM members m WHERE m.organization_id = o.id) AS member_count
+              FROM organizations o";
+
+$org_result = $conn->query($org_query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,27 +60,13 @@
                 <h2>Admin</h2>
             </div>
             <ul>
-                <a href="/app/pages/cms/dashboard.php">
-                    <li>Dashboard</li>
-                </a>
-                <a href="/app/pages/cms/usermanagement.php">
-                    <li>User Management</li>
-                </a>
-                <a href="/app/pages/cms/orgmanagement.php">
-                    <li>Organization Management</li>
-                </a>
-                <a href="/app/pages/cms/eventmanagement.php">
-                    <li>Event Management</li>
-                </a>
-                <a href="/app/pages/cms/forummoderation.php">
-                    <li>Forum Moderation</li>
-                </a>
-                <a href="/app/pages/cms/merchandiseapproval.php">
-                    <li>Merchandise Approvals</li>
-                </a>
-                <a href="/app/pages/cms/report.php">
-                    <li>Reports</li>
-                </a>
+                <a href="/app/pages/cms/dashboard.php"><li>Dashboard</li></a>
+                <a href="/app/pages/cms/usermanagement.php"><li>User Management</li></a>
+                <a href="/app/pages/cms/orgmanagement.php"><li>Organization Management</li></a>
+                <a href="/app/pages/cms/eventmanagement.php"><li>Event Management</li></a>
+                <a href="/app/pages/cms/forummoderation.php"><li>Forum Moderation</li></a>
+                <a href="/app/pages/cms/merchandiseapproval.php"><li>Merchandise Approvals</li></a>
+                <a href="/app/pages/cms/report.php"><li>Reports</li></a>
             </ul>
         </div>
         <div class="content">
@@ -59,29 +80,33 @@
             <table>
                 <caption>Organization List</caption>
                 <tr>
-                    <th></th>
-                    <th>ID</th>
                     <th>Organization Name</th>
-                    <th>Status</th>
                     <th>No. of members</th>
                     <th>Date created</th>
+                    <th>Actions</th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>TPG</td>
-                    <td>The Programmers' Guild</td>
-                    <td>Active</td>
-                    <td>10</td>
-                    <td>October 23, 2024</td>
-                </tr>
+                <?php if ($org_result->num_rows > 0): ?>
+                    <?php while ($org = $org_result->fetch_assoc()): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($org['org_name']); ?></td>
+                            <td><?php echo $org['member_count']; ?></td>
+                            <td><?php echo date("F d, Y", strtotime($org['established_date'])); ?></td>
+                            <td>
+                                <a href="/app/pages/cms/details/<?php echo isset($org_files[$org['org_id']]) ? $org_files[$org['org_id']] : 'default.php'; ?>?org_id=<?php echo $org['org_id']; ?>">
+                                    <button>View/Edit</button>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endwhile; ?>
+                <?php else: ?>
+                    <tr><td colspan="4">No organizations found.</td></tr>
+                <?php endif; ?>
             </table>
-                <a href="/app/pages/cms/details/addorg.php"><button class="highlight">Add organization</button></a>
-                <a href="#"><button>Remove</button></a>
         </div>
     </section>
 </body>
 </html>
 
 <?php
-    include '/laragon/www/pup-engage/app/components/footer.php';
+$conn->close();
 ?>
