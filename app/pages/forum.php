@@ -78,7 +78,7 @@ if (isset($_SESSION['online_users'])) {
                 <div class="forum-card">
                     <div class="forum-items">
                         <h3>Welcome to the Forum</h3>
-                        <a href="#">Forum Announcements</a>
+                        <a href="/app/pages/forum/announcement.php">Forum Announcement</a>
                         <a href="/app/pages/forum/gettingstarted.php">Getting Started with PUP Engage</a>
                     </div>
                 </div>
