@@ -56,7 +56,7 @@ if (isset($_SESSION['online_users'])) {
     <section class="main-content">
         <div class="sidenav">
             <div class="profile">
-                <img src="/app/img/tpg-logo.jpg" alt="logo">
+                <img src="/app/img/adminlogo.png" alt="logo">
                 <h2>Admin</h2>
             </div>
             <ul>

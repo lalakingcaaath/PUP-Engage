@@ -1,5 +1,6 @@
 .profile-page {
     font-family: "Inter", sans-serif;
+
     .profile-card {
         display: flex;
         flex-direction: column;
@@ -14,7 +15,7 @@
             img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;   
+                object-fit: cover;
             }
         }
 
@@ -24,8 +25,9 @@
             gap: 2rem;
             background-color: lightgrey;
             padding: 1rem;
+            align-items: center;
 
-           .profile-image-container {
+            .profile-image-container {
                 width: 10rem;
                 height: 10rem;
                 border-radius: 50%;
@@ -37,49 +39,27 @@
                     height: 100%;
                     object-fit: cover;
                 }
-           }
+            }
 
             h1 {
-                display: flex;
-                flex-direction: column;
-                justify-content: end;
                 font-size: 2.5rem;
             }
-        }
-    }
 
-    .about-card {
-        margin: 2rem 5rem;
-        padding: 1rem 2rem;
-        background-color: lightgray;
-
-        .about-card-header {
-            display: flex;
-            flex-direction: row;
-            
-            button {
-                background-color: transparent;
-                border: 0;
-                cursor: pointer;
+            a {
+                text-decoration: none;
+                color: black;
                 margin-left: auto;
             }
         }
-
-        .edit-section {
-            display: none;
-
-            textarea {
-                margin-bottom: 1rem;
-            }
-        }
     }
 
-    .course-card {
+    // Card styles
+    .about-card, .course-card, .affiliation-card, .project-card {
         margin: 2rem 5rem;
         padding: 1rem 2rem;
         background-color: lightgray;
 
-        .course-card-header {
+        &-header {
             display: flex;
             flex-direction: row;
 

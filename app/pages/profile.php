@@ -24,22 +24,26 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Prepare and bind
+// Fetch user details from users table
 $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
 $stmt->bind_param("s", $userEmail);
-
-// Execute the statement
 $stmt->execute();
 $result = $stmt->get_result();
-
-// Fetch user data
 $user = $result->fetch_assoc();
+$stmt->close();
 
+// Fetch user profile details from user_profiles table
+$stmt = $conn->prepare("SELECT * FROM user_profiles WHERE user_id = ?");
+$stmt->bind_param("i", $user['id']);
+$stmt->execute();
+$result = $stmt->get_result();
+$profile = $result->fetch_assoc();
+$stmt->close();
+
+$conn->close();
 ?>
 
-<?php
-   include '../components/header-loggedin.php'; 
-?>
+<?php include '../components/header-loggedin.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,56 +64,61 @@ $user = $result->fetch_assoc();
             <div class="profile-image">
                 <img class="profile-image-container" src="/app/img/profile-pic-blank.png" alt="profile-pic">
                 <h1><?php echo htmlspecialchars($user['firstName'] . ' ' . $user['lastName']); ?></h1>
+                <a href="/app/pages/editprofile.php">Edit Profile</a>
             </div>
         </div>
+
+        <!-- About Section -->
         <div class="about-card">
-           <div class="about-card-header">
-             <h2>About</h2>
-            <button id="editButton" onclick="editAboutContent()">Edit</button>
-           </div>
-            <div id="aboutContent" class="aboutContent">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, cupiditate aliquid quasi voluptatem dolor quibusdam, doloribus aspernatur libero ipsum laboriosam ea maiores, impedit quaerat? Unde consectetur cupiditate saepe omnis accusamus!</p>
+            <div class="about-card-header">
+                <h2>About</h2>
             </div>
-            <div id="editSection" class="edit-section">
-                <textarea id="aboutTextArea" rows="5" cols="100"></textarea><br>
-                <button onclick="updateAboutContent()">Save</button>
+            <div id="aboutContent" class="aboutContent">
+                <p><?php echo htmlspecialchars($profile['about'] ?? 'No about information provided.'); ?></p>
+            </div>
         </div>
-        </div>
+
+        <!-- Course Section -->
         <div class="course-card">
-    <div class="course-card-header">
-        <h2>Course</h2>
-        <button id="editAffiliation" onclick="editCourseContent()">Edit</button>
-    </div>
-    <div class="courseContent" id="courseContent">
-        <h3 id="courseTitle">Title</h3>
-        <p id="courseDescription">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id fuga dignissimos! Nam quasi molestiae, nemo in animi doloremque ad? Impedit, repudiandae quis eos beatae illum sequi cumque molestias vitae?
-        </p>
-    </div>
-    <div id="editCourseSection" class="edit-section" style="display:none">
-        <label for="courseTitleInput">Title:</label>
-        <input type="text" id="courseTitleInput" value="Title"><br>
-        <label for="courseDescriptionInput">Description:</label>
-        <textarea id="courseDescriptionInput" rows="4" cols="50">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id fuga dignissimos! Nam quasi molestiae, nemo in animi doloremque ad? Impedit, repudiandae quis eos beatae illum sequi cumque molestias vitae?
-        </textarea><br>
-        <button onclick="updateCourseContent()">Save</button>
-    </div>
-</div>
+            <div class="course-card-header">
+                <h2>Course</h2>
+            </div>
+            <div class="courseContent" id="courseContent">
+                <h3 id="courseTitle"><?php echo htmlspecialchars($profile['course_title'] ?? 'No course title'); ?></h3>
+                <p id="courseDescription"><?php echo htmlspecialchars($profile['course_description'] ?? 'No course description provided.'); ?></p>
+            </div>
+        </div>
+
+        <!-- Affiliation Section -->
+        <div class="affiliation-card">
+            <div class="affiliation-card-header">
+                <h2>Affiliation</h2>
+            </div>
+            <div class="affiliationContent" id="affiliationContent">
+                <h3><?php echo htmlspecialchars($profile['affiliation'] ?? 'No affiliation'); ?></h3>
+                <p>
+                    Start Date: <?php echo htmlspecialchars($profile['affiliation_start'] ?? 'N/A'); ?> <br>
+                    End Date: <?php echo htmlspecialchars($profile['affiliation_end'] ?? 'N/A'); ?>
+                </p>
+            </div>
+        </div>
+
+        <!-- Project Section -->
+        <div class="project-card">
+            <div class="project-card-header">
+                <h2>Project</h2>
+            </div>
+            <div class="projectContent" id="projectContent">
+                <h3><?php echo htmlspecialchars($profile['project_title'] ?? 'No project title'); ?></h3>
+                <p><?php echo htmlspecialchars($profile['project_description'] ?? 'No project description provided.'); ?></p>
+                <p>
+                    Start Date: <?php echo htmlspecialchars($profile['project_start'] ?? 'N/A'); ?> <br>
+                    End Date: <?php echo htmlspecialchars($profile['project_end'] ?? 'N/A'); ?>
+                </p>
+            </div>
+        </div>
     </section>
-    <script src="/app/js/editCourseContent.js"></script>
-    <script src="/app/js/editAboutContent.js"></script>
 </body>
 </html>
 
-<?php
-   include '../components/footer.php'; 
-?>
-
-
-<?php
-// Close the statement and connection
-$stmt->close();
-$conn->close();
-?>
-
+<?php include '../components/footer.php'; ?>
