@@ -1548,105 +1548,6 @@ h2 {
   text-decoration: underline;
 }
 
-.container {
-  width: 90%;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-form {
-  width: 100%;
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin-bottom: 20px;
-}
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-form button {
-  background-color: #007bff;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-}
-form button:hover {
-  background-color: #0056b3;
-}
-
-.post-container {
-  background: white;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.post-container h2 {
-  font-size: 20px;
-  color: #333;
-  margin-bottom: 10px;
-}
-.post-container p {
-  margin: 10px 0;
-}
-
-.comment-section {
-  margin-top: 15px;
-}
-.comment-section h3 {
-  font-size: 16px;
-  color: #333;
-}
-.comment-section .comment {
-  padding: 8px;
-  margin-top: 8px;
-  border-left: 2px solid #ccc;
-  font-size: 14px;
-  color: #555;
-  background: #f1f1f1;
-  border-radius: 5px;
-}
-
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 5px;
-  margin-top: 10px;
-}
-.actions button {
-  background-color: transparent;
-  color: #007bff;
-  cursor: pointer;
-  padding: 4px 6px;
-  border: 1px solid #ccc;
-  font-size: 12px;
-  border-radius: 4px;
-}
-.actions button:hover {
-  text-decoration: underline;
-  background: #e6e6e6;
-}
-
 .edit-profile {
   font-family: "Inter", sans-serif;
   margin-inline: 10rem;
@@ -1674,4 +1575,92 @@ form button:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.general_discussion {
+  font-family: "Inter", sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.general_discussion h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.general_discussion .forum-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+.general_discussion .forum-body .posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.general_discussion .forum-body .posts-container a {
+  text-decoration: none;
+  color: black;
+}
+.general_discussion .forum-body .posts-container .post-card {
+  background-color: lightgray;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.general_discussion .forum-body .posts-container .post-card p {
+  margin: 0.5rem 0;
+}
+.general_discussion .forum-body .posts-container .post-card .post-card-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+.general_discussion .forum-body .posts-container .post-card .post-card-info img {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.general_discussion .forum-body .posts-container .post-card .post-card-info .post-card-info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.general_discussion .forum-body .posts-container .post-card .post-stats {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.general_discussion .forum-body .posts-container .post-card .post-stats img {
+  height: 1rem;
+}
+.general_discussion .forum-body .posts-container .post-card .post-stats a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: black;
+}
+.general_discussion .forum-body .posts-container .post-card .post-stats a span {
+  background-color: #ddd;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
