@@ -1,3 +1,14 @@
+<?php 
+    session_start();
+
+    //Check if the user is logged in
+    if (isset($_SESSION['email'])) {
+        include '/laragon/www/pup-engage/app/components/header-loggedin.php';
+    } else {
+        include '/laragon/www/pup-engage/app/components/header-default.php';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,16 +28,19 @@
     </section>
     <section class="product-page">
         <div class="product-image">
-          <img src="/app/img/T7.jpg" alt="Product Image" />
+          <img src="/app/img/T9.png" alt="Product Image" />
         </div>
         <div class="product-details">
-          <h1>The Programmers' Guild - Bundle 1: Dark Mode</h1>
-          <p class="price">P588</p>
+          <h1>PUP Hygears - Official Shirt 2</h1>
+          <p class="price">P200</p>
       
           <div class="option-group">
             <h3>Color</h3>
             <div class="buttons">
               <button>Black</button>
+              <button>Brown</button>
+              <button>White</button>
+              <button>Maroon</button>
             </div>
           </div>
       
@@ -59,17 +73,17 @@
       <section class="desc-grp">
         <div class="desc-item">
           <h3>Item Description</h3>
-          <p>The Programmers' Guild - Bundle 1: Dark Mode</p>
+          <p>PUP Hygears - Official Shirt 2</p>
           <p>Size: Small to X-Large</p>
-          <p>Colors: Black</p>
+          <p>Colors: Black, Brown, White, Maroon</p>
           <p>Material: Cotton</p>
         </div>
         <div class="desc-item">
           <div class="seller">
-            <img src="/app/img/tpg-logo.jpg" alt="profile-image" class="seller-img">
+            <img src="/app/img/hygears.jpg" alt="profile-image" class="seller-img">
             <div class="seller-desc">
-              <h3>The Programmers' Guild</h3>
-              <a href="/app/pages/store/orgs/tpg.php"><button><img src="/app/img/icons8-store-24.png" alt="store">View Shop</button></a>
+              <h3>PUP Hygears</h3>
+              <a href="/app/pages/orgs/org-hygear.php"><button><img src="/app/img/icons8-store-24.png" alt="store">View Shop</button></a>
             </div>
           </div>
           <p>Joined: October 23, 2024</p>
@@ -78,3 +92,7 @@
       </section>
 </body>
 </html>
+
+<?php
+    include '/laragon/www/pup-engage/app/components/footer.php';
+?>
