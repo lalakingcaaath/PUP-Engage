@@ -475,6 +475,10 @@ footer .copyright {
 .directory .directory-card .directory-item img {
   width: 50%;
 }
+.directory .directory-card .directory-item a {
+  color: black;
+  text-decoration: none;
+}
 .directory .up {
   display: flex;
   justify-content: flex-end;
