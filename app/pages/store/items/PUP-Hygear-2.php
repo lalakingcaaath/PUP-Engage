@@ -7,6 +7,26 @@
     } else {
         include '/laragon/www/pup-engage/app/components/header-default.php';
     }
+
+           // Database Connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "pup_engage";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch product details (Assuming product_id = 1 for this example)
+$product_id = 8;
+$stmt = $conn->prepare("SELECT * FROM products WHERE id = ?");
+$stmt->bind_param("i", $product_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$product = $result->fetch_assoc();
+$stmt->close(); 
 ?>
 
 <!DOCTYPE html>
@@ -17,13 +37,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/styles.css">
     <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
-    <title>Item Boilerplate</title>
+    <title>PUP Hygear Store</title>
 </head>
 <body>
     <section class="store">
       <div class="search-store">
         <input type="text" placeholder="Search the store">
-        <a href="/app/pages/store/shoppingcart.php"><button><img src="/app/img/icons8-shopping-bag-24.png" alt="shopping bag"></button></a>
+        <a href="/app/pages/store/checkout.php"><button><img src="/app/img/icons8-shopping-bag-24.png" alt="shopping bag"></button></a>
       </div>
     </section>
     <section class="product-page">
@@ -31,44 +51,45 @@
           <img src="/app/img/T9.png" alt="Product Image" />
         </div>
         <div class="product-details">
-          <h1>PUP Hygears - Official Shirt 2</h1>
-          <p class="price">P200</p>
+          <h1><?php echo htmlspecialchars($product['name']); ?></h1>
+          <p class="price">P<?php echo number_format($product['price'], 2); ?></p>
       
-          <div class="option-group">
-            <h3>Color</h3>
-            <div class="buttons">
-              <button>Black</button>
-              <button>Brown</button>
-              <button>White</button>
-              <button>Maroon</button>
+          <form action="/app/php/add_to_cart.php" method="POST">
+            <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
+            <input type="hidden" name="price" value="<?php echo $product['price']; ?>">
+            
+            <div class="option-group">
+              <h3>Color</h3>
+              <select name="color">
+                <option value="Black">Black</option>
+                <option value="Brown">Brown</option>
+                <option value="White">White</option>
+                <option value="Maroon">Maroon</option>
+              </select>
             </div>
-          </div>
       
-          <div class="option-group">
-            <h3>Size</h3>
-            <div class="buttons">
-              <button>S</button>
-              <button>M</button>
-              <button>L</button>
-              <button>XL</button>
+            <div class="option-group">
+              <h3>Size</h3>
+              <select name="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
             </div>
-          </div>
       
-          <div class="option-group">
-            <h3>Quantity</h3>
-            <div class="quantity-control">
-              <button>-</button>
-              <input type="number" value="1" min="1" />
-              <button>+</button>
+            <div class="option-group">
+              <h3>Quantity</h3>
+              <input type="number" name="quantity" value="1" min="1">
             </div>
-          </div>
       
-          <div class="actions">
-            <a href="/app/pages/store/shoppingcart.php"><button class="add-to-cart">Add to cart</button></a>
-            <button class="buy-now">Buy Now</button>
-          </div>
+            <div class="actions">
+              <button type="submit" name="add_to_cart" class="add-to-cart">Add to cart</button>
+              <button type="submit" name="buy_now" class="buy-now">Buy Now</button>
+            </div>
+          </form>
         </div>
-      </section>
+    </section>
 
       <section class="desc-grp">
         <div class="desc-item">

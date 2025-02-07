@@ -23,7 +23,7 @@
     <section class="store">
         <div class="search-store">
           <input type="text" placeholder="Search the store">
-          <a href="/app/pages/store/shoppingcart.php"><button><img src="/app/img/icons8-shopping-bag-24.png" alt="shopping bag"></button></a>
+          <a href="/app/pages/store/checkout.php"><button><img src="/app/img/icons8-shopping-bag-24.png" alt="shopping bag"></button></a>
         </div>
         <div class="banner">
             <img src="/app/img/tpg-banner.jpg" alt="banner">
