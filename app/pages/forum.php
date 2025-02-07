@@ -84,7 +84,7 @@ if (isset($_SESSION['online_users'])) {
                 </div>
                 <div class="forum-card">
                     <div class="column-card">
-                        <a href="#">
+                        <a href="/app//pages/forum/generaldiscussion.php">
                             <img src="/app/img/icons8-inbox-96.png" alt="discussion">
                             <h3>General Discussion</h3>
                         </a>
