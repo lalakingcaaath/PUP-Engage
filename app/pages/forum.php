@@ -45,8 +45,8 @@ if (isset($_SESSION['online_users'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css?v=2">
-    <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/dist/styles.css?v=2">
+    <link rel="shortcut icon" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" type="image/x-icon">
     <title>Forum</title>
 </head>
 <body>
@@ -61,15 +61,15 @@ if (isset($_SESSION['online_users'])) {
         <div class="forum-content">
     <div class="forum-info">
         <div class="info-card">
-            <img src="/app/img/icons8-information-96.png" alt="info">
+            <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-information-96.png" alt="info">
             <h2><?php echo $userCount; ?> Members</h2>
         </div>
         <div class="info-card">
-            <img src="/app/img/icons8-message-96.png" alt="posts">
+            <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-message-96.png" alt="posts">
             <h2><?php echo $postCount; ?> Posts</h2>
         </div>
         <div class="info-card">
-            <img src="/app/img/icons8-person-96.png" alt="online">
+            <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-person-96.png" alt="online">
             <h2><?php echo $onlineUsers; ?> Online</h2>
         </div>
     </div>
@@ -78,20 +78,20 @@ if (isset($_SESSION['online_users'])) {
                 <div class="forum-card">
                     <div class="forum-items">
                         <h3>Welcome to the Forum</h3>
-                        <a href="/app/pages/forum/announcement.php">Forum Announcement</a>
-                        <a href="/app/pages/forum/gettingstarted.php">Getting Started with PUP Engage</a>
+                        <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum/announcement.php">Forum Announcement</a>
+                        <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum/gettingstarted.php">Getting Started with PUP Engage</a>
                     </div>
                 </div>
                 <div class="forum-card">
                     <div class="column-card">
-                        <a href="/app//pages/forum/generaldiscussion.php">
-                            <img src="/app/img/icons8-inbox-96.png" alt="discussion">
+                        <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum/generaldiscussion.php">
+                            <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-inbox-96.png" alt="discussion">
                             <h3>General Discussion</h3>
                         </a>
                     </div>
                     <div class="column-card">
-                        <a href="/app/pages/forum/request.php">
-                            <img src="/app/img/icons8-question-96.png" alt="requests and questions">
+                        <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum/request.php">
+                            <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-question-96.png" alt="requests and questions">
                             <h3>Requests and Questions</h3>
                         </a>
                     </div>
@@ -109,7 +109,7 @@ if (isset($_SESSION['online_users'])) {
                             while ($latestThread = $latestThreadsResult->fetch_assoc()) {
                                 $latestThreadID = $latestThread['id'];
                                 $latestTitle = htmlspecialchars($latestThread['title']);
-                                echo "<a href='/app/pages/forum/thread.php?id=$latestThreadID'>$latestTitle</a>";
+                                echo "<a href='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum/thread.php?id=$latestThreadID'>$latestTitle</a>";
                             }
                         } else {
                             echo "<p>No new topics available.</p>";
@@ -152,19 +152,19 @@ if (isset($_SESSION['online_users'])) {
                                 $downvotes = $row['downvotes'];
                                 $commentCount = $row['commentCount'];
 
-                                echo "<a href='/app/pages/forum/thread.php?id=$threadID'>
+                                echo "<a href='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum/thread.php?id=$threadID'>
                                         <div class='post-card'>
                                             <div class='post-card-info'>
-                                                <img src='/app/img/profile-pic-blank.png' alt='profile'>
+                                                <img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/profile-pic-blank.png' alt='profile'>
                                                 <div class='post-card-info-text'>
                                                     <p><strong>$title</strong></p>
                                                     <p>By $author • $createdAt</p>
                                                 </div>
                                             </div>
                                             <div class='post-stats'>
-                                                <span><img src='/app/img/icons8-upvote-96.png' alt='upvote'>$upvotes</span> 
-                                                <span><img src='/app/img/icons8-downvote-96.png' alt='downvote'>$downvotes</span> 
-                                                <span><img src='/app/img/icons8-message-96.png' alt='comments'>$commentCount</span>
+                                                <span><img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-upvote-96.png' alt='upvote'>$upvotes</span> 
+                                                <span><img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-downvote-96.png' alt='downvote'>$downvotes</span> 
+                                                <span><img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-message-96.png' alt='comments'>$commentCount</span>
                                             </div>
                                         </div>
                                       </a>";
@@ -181,8 +181,8 @@ if (isset($_SESSION['online_users'])) {
                     <!-- Thread Card Section -->
                     <div class="thread-card">
                         <div class="post-thread">
-                            <a href="<?php echo isset($loginRedirectURL) ? $loginRedirectURL : '/app/pages/forum/createthread.php'; ?>">
-                                <img src="/app/img/icons8-message-96.png" alt="post thread">
+                            <a href="<?php echo isset($loginRedirectURL) ? $loginRedirectURL : 'https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum/createthread.php'; ?>">
+                                <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-message-96.png" alt="post thread">
                                 <h4>Post Thread</h4>
                             </a>
                         </div>
@@ -205,20 +205,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 data.posts.forEach(post => {
                     const postCard = document.createElement("a");
-                    postCard.href = `/app/pages/forum/thread.php?id=${post.id}`;
+                    postCard.href = `https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum/thread.php?id=${post.id}`;
                     postCard.innerHTML = `
                         <div class='post-card'>
                             <div class='post-card-info'>
-                                <img src='/app/img/profile-pic-blank.png' alt='profile'>
+                                <img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/profile-pic-blank.png' alt='profile'>
                                 <div class='post-card-info-text'>
                                     <p><strong>${post.title}</strong></p>
                                     <p>By ${post.author} • ${post.createdAt}</p>
                                 </div>
                             </div>
                             <div class='post-stats'>
-                                <span><img src='/app/img/icons8-upvote-96.png' alt='upvote'>${post.upvotes}</span> 
-                                <span><img src='/app/img/icons8-downvote-96.png' alt='downvote'>${post.downvotes}</span> 
-                                <span><img src='/app/img/icons8-message-96.png' alt='comments'>${post.commentCount}</span>
+                                <span><img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-upvote-96.png' alt='upvote'>${post.upvotes}</span> 
+                                <span><img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-downvote-96.png' alt='downvote'>${post.downvotes}</span> 
+                                <span><img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-message-96.png' alt='comments'>${post.commentCount}</span>
                             </div>
                         </div>
                     `;

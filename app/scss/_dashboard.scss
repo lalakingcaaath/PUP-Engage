@@ -79,3 +79,66 @@
         }
     }
 }
+
+// Media query for max-width 411px
+@media (max-width: 411px) {
+    .main-content {
+        flex-direction: column; // Stack sidebar and content vertically
+
+        .content {
+            padding: 1rem; // Reduce padding for smaller screens
+
+            .content-header {
+                flex-direction: column; // Stack items for better spacing
+                gap: 0.5rem;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .card {
+                grid-template-columns: repeat(2, 1fr); // Reduce to 2 columns for small screens
+                gap: 0.5rem;
+
+                .card-item {
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
+
+    .sidenav {
+        width: 100%; // Make sidebar full width on small screens
+        height: auto; // Adjust height to fit content
+        position: relative; // Remove sticky positioning for better mobile UX
+        padding: 1rem; // Reduce padding
+
+        .profile {
+            flex-direction: column; // Stack profile image and text
+            gap: 1rem;
+            align-items: center;
+            text-align: center;
+
+            h2 {
+                color: white;
+                margin-bottom: 0.5rem;
+            }
+
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+
+        ul {
+            align-items: center; // Center menu items
+            gap: 1rem;
+
+            a {
+                text-align: center;
+            }
+        }
+    }
+}

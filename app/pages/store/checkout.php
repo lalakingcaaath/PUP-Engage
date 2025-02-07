@@ -50,15 +50,15 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css">
-    <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/dist/styles.css">
+    <link rel="shortcut icon" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" type="image/x-icon">
     <title>Checkout</title>
 </head>
 <body>
     <header class="subheader">
         <nav>
             <ul>
-                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/index.php"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
                 <li>PUP Engage</li>
                 <li>Checkout</li>
             </ul>
@@ -68,7 +68,7 @@ $conn->close();
     <section class="store">
         <div class="search-store">
             <input type="text" placeholder="Search the store">
-            <a href="./store.php"><button><img src="/app/img/icons8-shopping-bag-24.png" alt="shopping bag"></button></a>
+            <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/store/store.php"><button><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-shopping-bag-24.png" alt="shopping bag"></button></a>
         </div>
     </section>
     
@@ -93,7 +93,7 @@ $conn->close();
                 <p>P<?php echo number_format($item['price'], 2); ?></p>
                 
                 <!-- Remove Button -->
-                <form action="/app/php/remove_from_cart.php" method="POST">
+                <form action="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/php/remove_from_cart.php" method="POST">
                     <input type="hidden" name="color" value="<?php echo htmlspecialchars($item['color']); ?>">
                     <input type="hidden" name="size" value="<?php echo htmlspecialchars($item['size']); ?>">
                     <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($item['name']); ?>">
@@ -105,7 +105,7 @@ $conn->close();
         <p>Your cart is empty.</p>
     <?php endif; ?>
 
-    <form action="/app/php/place_order.php" method="POST">
+    <form action="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/php/place_order.php" method="POST">
     <div class="checkout-final">
         <div class="payment-unit">
             <p>Payment Method</p>

@@ -1,21 +1,21 @@
 .header-login {
     nav {
         ul {
-          display: flex;
-          justify-content: flex-start; 
-          align-items: center; 
-          padding: 0; 
-          margin: 0; 
-          list-style-type: none;
-          width: 100%; 
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            width: 100%;
         }
 
         ul li {
-          margin: 0.5rem 1.5rem; 
-          color: black;
-          font-family: "Cinzel", serif;
-          font-weight: bold;
-          font-size: 1.10rem;
+            margin: 0.5rem 1.5rem;
+            color: black;
+            font-family: "Cinzel", serif;
+            font-weight: bold;
+            font-size: 1.10rem;
         }
 
         ul li:last-child {
@@ -24,9 +24,9 @@
         }
 
         ul li img {
-          width: 4.5rem;
+            width: 4.5rem;
         }
-      }
+    }
 }
 
 .login {
@@ -36,13 +36,13 @@
     place-items: center;
 
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url("/app/img/hero.jpg");
+        background-image: url("https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/hero.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0.5;
@@ -57,12 +57,13 @@
         .hero-text {
             font-family: "Noto Sans", sans-serif;
             text-align: center;
-    
+
             h2 {
                 margin: 0;
                 font-size: 2rem;
+                color: black;
             }
-    
+
             img {
                 width: 30%;
             }
@@ -79,8 +80,9 @@
             form {
                 display: grid;
                 gap: 1rem;
-                
-                input[type=text], input[type=password] {
+
+                input[type="text"],
+                input[type="password"] {
                     padding: 0.5rem;
                     border-radius: 0.25rem;
                     border-color: lightgray;
@@ -100,6 +102,63 @@
             a {
                 color: black;
                 padding-bottom: 5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 411px) {
+    .header-login {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
+            width: 100%;
+        }
+
+        ul li img {
+            width: 3.5rem;
+        }
+    }
+
+    .login {
+        height: 150vh;
+        .login-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+            padding: 1rem;
+
+            .hero-text {
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                img {
+                    width: 50%;
+                }
+            }
+
+            .login-form {
+                width: 100%;
+                padding: 1rem;
+
+                form {
+                    input[type="text"],
+                    input[type="password"] {
+                        font-size: 1rem;
+                        width: 100%;
+                    }
+                }
+
+                button {
+                    font-size: 1rem;
+                }
             }
         }
     }

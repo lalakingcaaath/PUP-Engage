@@ -1,4 +1,3 @@
-
 <?php 
     session_start();
 
@@ -37,8 +36,8 @@ $postCount = $postCountResult->fetch_assoc()['totalPosts'];
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css">
-    <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/dist/styles.css">
+    <link rel="shortcut icon" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" type="image/x-icon">
     <title>General Discussion</title>
 </head>
 <body>
@@ -71,18 +70,18 @@ $postCount = $postCountResult->fetch_assoc()['totalPosts'];
                 $downvotes = $row['downvotes'];
                 $commentCount = $row['commentCount'];
 
-                echo "<a href='/app/pages/forum/thread.php?id=$threadID'>  <div class='post-card'>
+                echo "<a href='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum/thread.php?id=$threadID'>  <div class='post-card'>
                             <div class='post-card-info'>
-                                <img src='/app/img/profile-pic-blank.png' alt='profile'>
+                                <img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/profile-pic-blank.png' alt='profile'>
                                 <div class='post-card-info-text'>
                                     <p><strong>$title</strong></p>  <p>By $author • $createdAt</p>
                                 
                                 </div>
                             </div>
                             <div class='post-stats'>
-                                <span><img src='/app/img/icons8-upvote-96.png' alt='upvote'>$upvotes</span> 
-                                <span><img src='/app/img/icons8-downvote-96.png' alt='downvote'>$downvotes</span> 
-                                <span><img src='/app/img/icons8-message-96.png' alt='comments'>$commentCount</span>
+                                <span><img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-upvote-96.png' alt='upvote'>$upvotes</span> 
+                                <span><img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-downvote-96.png' alt='downvote'>$downvotes</span> 
+                                <span><img src='https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-message-96.png' alt='comments'>$commentCount</span>
                             </div>
                         </div>
                     </a>";

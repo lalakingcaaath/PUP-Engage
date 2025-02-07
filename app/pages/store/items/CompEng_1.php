@@ -35,27 +35,27 @@ $stmt->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css">
-    <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/dist/styles.css">
+    <link rel="shortcut icon" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" type="image/x-icon">
     <title>PUP SETS Store</title>
 </head>
 <body>
     <section class="store">
       <div class="search-store">
         <input type="text" placeholder="Search the store">
-        <a href="/app/pages/store/checkout.php"><button><img src="/app/img/icons8-shopping-bag-24.png" alt="shopping bag"></button></a>
+        <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/store/checkout.php"><button><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-shopping-bag-24.png" alt="shopping bag"></button></a>
       </div>
     </section>
 
     <section class="product-page">
         <div class="product-image">
-          <img src="/app/img/T11.jpg" alt="Product Image" />
+          <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/T11.jpg" alt="Product Image" />
         </div>
         <div class="product-details">
           <h1><?php echo htmlspecialchars($product['name']); ?></h1>
           <p class="price">P<?php echo number_format($product['price'], 2); ?></p>
       
-          <form action="/app/php/add_to_cart.php" method="POST">
+          <form action="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/php/add_to_cart.php" method="POST">
             <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
             <input type="hidden" name="price" value="<?php echo $product['price']; ?>">
             

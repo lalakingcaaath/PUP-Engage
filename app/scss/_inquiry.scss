@@ -7,4 +7,15 @@
             color: #800000;
         }
     }
+
+    // Media query for max-width 411px
+    @media (max-width: 411px) {
+        .inquiry-content {
+            margin: 1rem;
+
+            h1, h2, h3 {
+                font-size: 1.2rem; // Adjusted font size for smaller screens
+            }
+        }
+    }
 }

@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("isss", $userID, $title, $content, $postType);
 
     if ($stmt->execute()) {
-        echo "<script>alert('Post created successfully'); window.location.href = '/app/pages/forum.php';</script>";
+        echo "<script>alert('Post created successfully'); window.location.href = 'https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum.php';</script>";
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -46,14 +46,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css">
-    <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/dist/styles.css">
+    <link rel="shortcut icon" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" type="image/x-icon">
     <title>Create Thread</title>
 </head>
 <body>
     <section class="create-thread">
         <div class="thread-header">
-            <a href="/app/pages/forum.php"><img src="/app/img/icons8-back-96.png" alt="go back"></a>
+            <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum.php"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-back-96.png" alt="go back"></a>
             <h1>Create post</h1>
             <p>Drafts</p>
         </div>
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit"class="option" data-type="image">Images & Videos</button>
             <button type="submit"class="option" data-type="link">Link</button>
         </div>
-        <form action="createthread.php" method="POST" enctype="multipart/form-data">
+        <form action="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum/createthread.php" method="POST" enctype="multipart/form-data">
         <div class="thread-title">
             <input type="text" name="title" placeholder="Title" required>
         </div>
@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </form>
     </section>
-    <script src="/app/js/createthreadbutton.js"></script>
+    <script src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/js/createthreadbutton.js"></script>
 </body>
 </html>
 

@@ -59,15 +59,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css">
-    <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/dist/styles.css">
+    <link rel="shortcut icon" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" type="image/x-icon">
     <title>Sign Up</title>
 </head>
 <body>
     <header class="header-signup">
         <nav>
             <ul>
-                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/index.php"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
                 <li>PUP Engage</li>
                 <li>Sign Up</li>
             </ul>
@@ -76,11 +76,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="signup">
         <div class="signup-content">
             <div class="hero-text">
-                <img src="/app/img/PUPLogo.png" alt="PUP Logo">
+                <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" alt="PUP Logo">
                 <h2>PUP Engage: <br> Your Hub for Student Connections!</h2>
             </div>
             <div class="signup-form">
-                <form method="POST" action="signup.php">
+                <form method="POST" action="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/signup.php">
                     <label for="fname">First Name</label>
                     <input type="text" name="fname" placeholder="Enter your first name" id="fname" required>
                     <label for="lname">Last Name</label>

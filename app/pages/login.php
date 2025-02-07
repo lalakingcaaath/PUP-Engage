@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $user['id']; // Store the user ID in the session
             $_SESSION['email'] = $email;
 
-            echo "<script>alert('Login successful'); window.location.href = 'http://pup-engage.test/index.php';</script>";
+            echo "<script>alert('Login successful'); window.location.href = 'https://60c5-136-158-24-254.ngrok-free.app/pup-engage/index.php';</script>";
             exit();
         } else {
             // Incorrect password
@@ -62,15 +62,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css">
-    <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/dist/styles.css">
+    <link rel="shortcut icon" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" type="image/x-icon">
     <title>Login</title>
 </head>
 <body>
     <header class="header-login">
         <nav>
             <ul>
-                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/index.php"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
                 <li>PUP Engage</li>
                 <li>Log In</li>
             </ul>
@@ -79,18 +79,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="login">
         <div class="login-content">
             <div class="hero-text">
-                <img src="/app/img/PUPLogo.png" alt="PUP Logo">
+                <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" alt="PUP Logo">
                 <h2>PUP Engage: <br> Your Hub for Student Connections!</h2>
             </div>
             <div class="login-form">
-                <form method="POST" action="login.php">
+                <form method="POST" action="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/login.php">
                     <label for="email">Email</label>
                     <input type="text" placeholder="Enter your email" name="email" id="email">
                     <label for="password">Password</label>
                     <input type="password" placeholder="Enter your password" name="password" id="password">
                     <button type="submit">Sign In</button>
                 </form>
-                <a href="/app/pages/reset.php">Forgot password?</a>
+                <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/reset.php">Forgot password?</a>
             </div>
         </div>
     </section>

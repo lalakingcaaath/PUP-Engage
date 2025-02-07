@@ -30,3 +30,30 @@
         }
     }
 }
+
+// Media query for max-width 411px
+@media (max-width: 411px) {
+    .edit-profile {
+        margin-inline: 1rem; // Reduce margins for smaller screens
+
+        h1 {
+            font-size: 1.5rem; // Adjust font size for better fit
+        }
+
+        .edit-form {
+            gap: 1rem; // Reduce gap for better spacing
+            
+            input,
+            textarea {
+                font-size: 0.9rem; // Reduce font size for smaller screens
+                padding: 0.5rem; // Adjust padding for compact input fields
+            }
+
+            button {
+                width: 100%; // Make button full width for better touch interaction
+                padding: 0.75rem;
+                font-size: 1rem;
+            }
+        }
+    }
+}

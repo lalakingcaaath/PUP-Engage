@@ -61,14 +61,14 @@ $downvotes = $votes['downvotes'] ?? 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css">
-    <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/dist/styles.css">
+    <link rel="shortcut icon" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" type="image/x-icon">
     <title><?php echo htmlspecialchars($thread['title']); ?></title>
 </head>
 <body>
     <section class="thread-page">
         <div class="thread-header">
-            <a href="/app/pages/forum.php" class="back-button"><img src="/app/img/icons8-back-96.png" alt="Go Back"></a>
+            <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum.php" class="back-button"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-back-96.png" alt="Go Back"></a>
             <h1><?php echo htmlspecialchars($thread['title']); ?></h1>
         </div>
 
@@ -123,10 +123,10 @@ document.getElementById("comment-count").textContent = "<?php echo $commentCount
 
 <div class="thread-actions">
     <button class="vote-button upvote" data-thread="<?php echo $threadID; ?>">
-        <img src="/app/img/icons8-upvote-96.png" alt="upvote"> Upvote (<span id="upvote-count"><?php echo $upvotes; ?></span>)
+        <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-upvote-96.png" alt="upvote"> Upvote (<span id="upvote-count"><?php echo $upvotes; ?></span>)
     </button>
     <button class="vote-button downvote" data-thread="<?php echo $threadID; ?>">
-        <img src="/app/img/icons8-downvote-96.png" alt="downvote"> Downvote (<span id="downvote-count"><?php echo $downvotes; ?></span>)
+        <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-downvote-96.png" alt="downvote"> Downvote (<span id="downvote-count"><?php echo $downvotes; ?></span>)
     </button>
 </div>
 
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const threadID = this.getAttribute("data-thread");
             const voteType = this.classList.contains("upvote") ? "upvote" : "downvote";
 
-            fetch("/app/pages/vote.php", {
+            fetch("https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/vote.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: `threadID=${threadID}&voteType=${voteType}`
@@ -168,7 +168,7 @@ document.getElementById("comment-form").addEventListener("submit", function(e) {
         return;
     }
 
-    fetch("/app/pages/comment.php", {
+    fetch("https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/comment.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: `threadID=${threadID}&content=${encodeURIComponent(content)}`

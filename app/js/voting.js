@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const threadID = this.getAttribute("data-thread");
             const voteType = this.classList.contains("upvote") ? "upvote" : "downvote";
 
-            fetch("/app/pages/forum/vote.php", {
+            fetch("https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum/vote.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded"

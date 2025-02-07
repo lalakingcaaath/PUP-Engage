@@ -5,15 +5,15 @@
         display: flex;
         justify-content: center;
         margin: 2rem 0;
-        
-        input[type=text] {
+
+        input[type="text"] {
             width: 40%;
             padding: 1rem;
         }
 
         a {
             display: grid;
-            
+
             button {
                 background-color: transparent;
                 border: 0px;
@@ -37,7 +37,7 @@
             a {
                 display: grid;
                 place-items: center;
-                
+
                 img {
                     width: 75%;
                 }
@@ -45,6 +45,42 @@
 
             strong {
                 margin-top: 1rem;
+            }
+        }
+    }
+
+    // Media query for max-width 411px
+    @media (max-width: 411px) {
+        .search-store {
+            display: flex;
+            flex-direction: row; // Ensure it stays in a row
+            justify-content: center; // Center the content horizontally
+            align-items: center; // Center the content vertically
+            gap: 0.5rem; // Adjust gap for smaller screens
+    
+            input[type="text"] {
+                width: 70%; // Adjust width for better spacing
+            }
+    
+            a {
+                button {
+                    width: auto; // Ensure the button doesn't stretch unnecessarily
+                }
+            }
+        }
+
+        .store-card {
+            grid-template-columns: repeat(2, 1fr); // Reduce columns for small screens
+            margin: 1rem;
+
+            .store-item {
+                padding: 0.5rem;
+
+                a {
+                    img {
+                        width: 100%; // Images adjust to fit within the grid
+                    }
+                }
             }
         }
     }

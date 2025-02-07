@@ -15,20 +15,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css">
-    <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/dist/styles.css">
+    <link rel="shortcut icon" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" type="image/x-icon">
     <title>Item Boilerplate</title>
 </head>
 <body>
     <section class="store">
       <div class="search-store">
         <input type="text" placeholder="Search the store">
-        <a href="/app/pages/store/checkout.php"><button><img src="/app/img/icons8-shopping-bag-24.png" alt="shopping bag"></button></a>
+        <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/store/checkout.php"><button><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-shopping-bag-24.png" alt="shopping bag"></button></a>
       </div>
     </section>
     <section class="product-page">
         <div class="product-image">
-          <img src="/app/img/cpeshirt.png" alt="Product Image" />
+          <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/cpeshirt.png" alt="Product Image" />
         </div>
         <div class="product-details">
           <h1>BS CpE / BS Computer Engineering - Tanglaw Course Tees</h1>
@@ -64,7 +64,7 @@
           </div>
       
           <div class="actions">
-            <a href="/app/pages/store/checkout.php"><button class="add-to-cart">Add to cart</button></a>
+            <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/store/checkout.php"><button class="add-to-cart">Add to cart</button></a>
             <button class="buy-now">Buy Now</button>
           </div>
         </div>
@@ -80,10 +80,10 @@
         </div>
         <div class="desc-item">
           <div class="seller">
-            <img src="/app/img/tpg-logo.jpg" alt="profile-image" class="seller-img">
+            <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/tpg-logo.jpg" alt="profile-image" class="seller-img">
             <div class="seller-desc">
               <h3>The Programmers' Guild</h3>
-              <a href="/app/pages/store/orgs/tpg.php"><button><img src="/app/img/icons8-store-24.png" alt="store">View Shop</button></a>
+              <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/store/orgs/tpg.php"><button><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-store-24.png" alt="store">View Shop</button></a>
             </div>
           </div>
           <p>Joined: October 23, 2024</p>
@@ -94,31 +94,31 @@
       <section class="store">
         <div class="store-card">
           <div class="store-item">
-            <a href="/app/pages/store/items/item-boilerplate.php"><img src="/app/img/cpeshirt.png" alt="logo"></a>
+            <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/store/items/item-boilerplate.php"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/cpeshirt.png" alt="logo"></a>
             <strong>TPG Shirt</strong>
             <p>₱150</p>
             <span>TPG T-Shirt Merch</span>
         </div>
         <div class="store-item">
-            <a href="/app/pages/store/items/item-boilerplate.php"><img src="/app/img/cpeshirt.png" alt="logo"></a>
+            <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/store/items/item-boilerplate.php"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/cpeshirt.png" alt="logo"></a>
             <strong>TPG Shirt</strong>
             <p>₱150</p>
             <span>TPG T-Shirt Merch</span>
         </div>
         <div class="store-item">
-            <a href="/app/pages/store/items/item-boilerplate.php"><img src="/app/img/cpeshirt.png" alt="logo"></a>
+            <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/store/items/item-boilerplate.php"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/cpeshirt.png" alt="logo"></a>
             <strong>TPG Shirt</strong>
             <p>₱150</p>
             <span>TPG T-Shirt Merch</span>
         </div>
         <div class="store-item">
-            <a href="/app/pages/store/items/item-boilerplate.php"><img src="/app/img/cpeshirt.png" alt="logo"></a>
+            <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/store/items/item-boilerplate.php"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/cpeshirt.png" alt="logo"></a>
             <strong>TPG Shirt</strong>
             <p>₱150</p>
             <span>TPG T-Shirt Merch</span>
         </div>
         <div class="store-item">
-            <a href="/app/pages/store/items/item-boilerplate.php"><img src="/app/img/cpeshirt.png" alt="logo"></a>
+            <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/store/items/item-boilerplate.php"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/cpeshirt.png" alt="logo"></a>
             <strong>TPG Shirt</strong>
             <p>₱150</p>
             <span>TPG T-Shirt Merch</span>

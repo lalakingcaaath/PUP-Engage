@@ -128,3 +128,78 @@
     }
   }
 }
+
+// Media query for max-width 411px
+@media (max-width: 411px) {
+  .product-page {
+      display: flex;
+      flex-direction: column; // Stack elements vertically
+      gap: 1rem;
+      padding: 1rem;
+      margin: 1rem;
+
+      .product-image {
+          width: 100%;
+          border: none; // Remove border for better fit
+      }
+
+      .product-details {
+          h1 {
+              font-size: 1.2rem; // Adjust font size for readability
+          }
+
+          .price {
+              font-size: 1rem;
+          }
+      }
+
+      .option-group {
+          .buttons {
+              flex-wrap: wrap; // Allow buttons to wrap on small screens
+          }
+
+          .quantity-control {
+              flex-wrap: wrap;
+              input {
+                  width: 100%; // Make input take full width on smaller screens
+              }
+          }
+      }
+
+      .actions {
+          flex-direction: column; // Stack buttons vertically
+          gap: 0.5rem;
+
+          .add-to-cart, .buy-now {
+              width: 100%; // Make buttons full-width
+          }
+      }
+  }
+
+  .desc-grp {
+      display: flex;
+      flex-direction: column; // Stack sections vertically
+      gap: 1rem;
+      margin: 2rem 1rem;
+
+      .desc-item {
+          padding: 0.5rem;
+
+          .seller {
+              flex-direction: column; // Stack seller info
+              text-align: center;
+
+              .seller-img {
+                  width: 4rem;
+                  height: 4rem;
+              }
+          }
+
+          a {
+              button {
+                  width: 100%; // Make button full width
+              }
+          }
+      }
+  }
+}

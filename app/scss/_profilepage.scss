@@ -72,3 +72,58 @@
         }
     }
 }
+
+// Media query for max-width 411px
+@media (max-width: 411px) {
+    .profile-page {
+        .profile-card {
+            margin-inline: 1rem; // Reduce margin for smaller screens
+
+            .cover-photo {
+                height: 15rem; // Reduce cover photo height for better fit
+            }
+
+            .profile-image {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 1rem;
+                padding: 1rem;
+
+                .profile-image-container {
+                    width: 7rem; // Reduce profile image size
+                    height: 7rem;
+                }
+
+                h1 {
+                    font-size: 1.8rem; // Reduce font size for better scaling
+                }
+
+                a {
+                    margin-left: 0;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+
+        // Adjusting card styles for mobile
+        .about-card,
+        .course-card,
+        .affiliation-card,
+        .project-card {
+            margin: 1rem;
+            padding: 1rem;
+            
+            &-header {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+                text-align: center;
+
+                button {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

@@ -25,14 +25,14 @@ foreach ($_SESSION['online_users'] as $userID => $lastActive) {
 <header class="main-header">
         <nav>
             <ul>
-                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP logo"></a></li>
-                <li><a href="/index.php">Home</a></li>
-                <li><a href="/app/pages/directory.php">Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.php">Calendar</a></li>
-                <li><a href="/app/pages/forum.php">Forum</a></li>
-                <li><a href="/app/pages/store/store.php">Store</a></li>
-                <li><a href="/app/pages/profile.php">Profile</a></li>
-                <li><a href="/app/pages/logout.php">Log Out</a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/index.php"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" alt="PUP logo"></a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/index.php">Home</a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/directory.php">Directory</a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/generalcalendar.php">Calendar</a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/forum.php">Forum</a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/store/store.php">Store</a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/profile.php">Profile</a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/logout.php">Log Out</a></li>
             </ul>
         </nav>
     </header>

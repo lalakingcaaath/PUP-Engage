@@ -29,3 +29,23 @@
         width: 25%;
     }
 }
+
+// Media query for max-width 411px
+@media (max-width: 411px) {
+    .org-details {
+        align-items: center; // Center align content for a better layout
+
+        .image-upload {
+            label {
+                img {
+                    width: 7rem; // Reduce image size for smaller screens
+                    height: 7rem;
+                }
+            }
+        }
+
+        input {
+            width: 80%; // Make input fields take up more space for better usability
+        }
+    }
+}

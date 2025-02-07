@@ -1,11 +1,21 @@
 .getting-started {
-
     .getting-started-content {
-        font-family: "Noto Sans ", sans-serif;
+        font-family: "Noto Sans", sans-serif;
         margin: 2rem 10rem;
 
         h1, h2 {
             color: #800000;
+        }
+    }
+
+    // Media query for max-width 411px
+    @media (max-width: 411px) {
+        .getting-started-content {
+            margin: 1rem;
+            
+            h1, h2 {
+                font-size: 1.5rem; // Adjusted font size for smaller screens
+            }
         }
     }
 }

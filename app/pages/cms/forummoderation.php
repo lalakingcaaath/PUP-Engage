@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css">
-    <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/dist/styles.css">
+    <link rel="shortcut icon" href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" type="image/x-icon">
     <title>Forum Moderation</title>
 </head>
 <body>
     <header class="subheader">
         <nav>
             <ul>
-                <li><a href="/index.php"><img src="/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
+                <li><a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/index.php"><img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/PUPLogo.png" alt="PUP Logo"></a></li>
                 <li>PUP Engage</li>
                 <li>Forum Moderation</li>
             </ul>
@@ -21,36 +21,36 @@
     <section class="main-content">
         <div class="sidenav">
             <div class="profile">
-                <img src="/app/img/tpg-logo.jpg" alt="logo">
+                <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/tpg-logo.jpg" alt="logo">
                 <h2>Admin</h2>
             </div>
             <ul>
-                <a href="/app/pages/cms/dashboard.php">
+                <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/cms/dashboard.php">
                     <li>Dashboard</li>
                 </a>
-                <a href="/app/pages/cms/usermanagement.php">
+                <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/cms/usermanagement.php">
                     <li>User Management</li>
                 </a>
-                <a href="/app/pages/cms/orgmanagement.php">
+                <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/cms/orgmanagement.php">
                     <li>Organization Management</li>
                 </a>
-                <a href="/app/pages/cms/eventmanagement.php">
+                <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/cms/eventmanagement.php">
                     <li>Event Management</li>
                 </a>
-                <a href="/app/pages/cms/forummoderation.php">
+                <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/cms/forummoderation.php">
                     <li>Forum Moderation</li>
                 </a>
-                <a href="/app/pages/cms/merchandiseapproval.php">
+                <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/cms/merchandiseapproval.php">
                     <li>Merchandise Approvals</li>
                 </a>
-                <a href="/app/pages/cms/report.php">
+                <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/cms/report.php">
                     <li>Reports</li>
                 </a>
             </ul>
         </div>
         <div class="content">
             <div class="content-header">
-                <img src="/app/img/icons8-person-96.png" alt="dashboard">
+                <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-person-96.png" alt="dashboard">
                 <h2>Forum Moderation</h2>
             </div>
             <div class="search">
@@ -58,22 +58,22 @@
             </div>
             <div class="card">
                 <div class="card-item">
-                    <img src="/app/img/icons8-inbox-96.png" alt="users">
+                    <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-inbox-96.png" alt="users">
                     <p>100</p>
                     <p>Total posts</p>
                 </div>
                 <div class="card-item">
-                    <img src="/app/img/icons8-message-96.png" alt="orgs">
+                    <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-message-96.png" alt="orgs">
                     <p>35</p>
                     <p>Total comments</p>
                 </div>
                 <div class="card-item">
-                    <img src="/app/img/icons8-proactivity-96.png" alt="events">
+                    <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-proactivity-96.png" alt="events">
                     <p>35</p>
                     <p>Active threads</p>
                 </div>
                 <div class="card-item">
-                    <img src="/app/img/icons8-alert-96.png" alt="sales">
+                    <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/icons8-alert-96.png" alt="sales">
                     <p>35</p>
                     <p>Reported posts</p>
                 </div>

@@ -15,21 +15,21 @@ body {
 .subheader {
     nav {
         ul {
-          display: flex;
-          justify-content: flex-start; 
-          align-items: center; 
-          padding: 0; 
-          margin: 0; 
-          list-style-type: none;
-          width: 100%; 
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            width: 100%;
         }
 
         ul li {
-          margin: 0.5rem 1.5rem; 
-          color: black;
-          font-family: "Cinzel", serif;
-          font-weight: bold;
-          font-size: 1.10rem;
+            margin: 0.5rem 1.5rem;
+            color: black;
+            font-family: "Cinzel", serif;
+            font-weight: bold;
+            font-size: 1.10rem;
         }
 
         ul li:last-child {
@@ -38,11 +38,11 @@ body {
         }
 
         ul li img {
-          width: 4.5rem;
+            width: 4.5rem;
         }
-      }
+    }
 }
-  
+
 table {
     margin-inline: auto;
     margin-bottom: 2rem;
@@ -60,7 +60,7 @@ th, td {
     text-align: center;
 }
 
-  footer {
+footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-family: "Inter", sans-serif;
@@ -88,7 +88,6 @@ th, td {
     }
 
     .socmed {
-
         span {
             font-weight: 500;
         }
@@ -107,4 +106,55 @@ th, td {
         grid-column: 1 / -1;
         text-align: center;
     }
-  }
+}
+
+@media (max-width: 411px) {
+    .subheader {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
+            width: 100%;
+        }
+
+        ul li img {
+            width: 3.5rem;
+        }
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+
+        .links {
+            margin: 0;
+            width: 100%;
+
+            ul {
+                padding-left: 0;
+            }
+        }
+
+        .socmed {
+            margin-top: 1rem;
+        }
+
+        .copyright {
+            margin-top: 1rem;
+        }
+    }
+}

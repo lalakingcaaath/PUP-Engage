@@ -1,12 +1,13 @@
 .forum {
     font-family: "Inter", sans-serif;
 
+    // Forum Hero Section
     .forum-hero {
         position: relative;
         height: 50vh;
         display: grid;
         place-items: center;
-    
+
         &::before {
             content: '';
             position: absolute;
@@ -14,7 +15,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url("/app/img/forumhero.jpg");
+            background-image: url("https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/forumhero.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             opacity: 0.5;
@@ -32,22 +33,23 @@
             input {
                 font-family: "Inter", sans-serif;
                 padding: 1rem;
-                width: 100%;
+                width: 50%; /* Default width */
             }
         }
     }
 
+    // Forum Content Section
     .forum-content {
         margin: 3rem 5rem;
 
         .forum-info {
             display: flex;
-            flex-direction: row;
+            flex-direction: row; /* Default is row */
             gap: 2rem;
 
             .info-card {
                 display: flex;
-                flex-direction: row;
+                flex-direction: row; /* Default is row */
                 gap: 1rem;
                 align-items: center;
 
@@ -58,6 +60,7 @@
         }
     }
 
+    // Forum Welcome Section
     .forum-welcome {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -80,7 +83,7 @@
             h3 {
                 margin: 0;
             }
-            
+
             a {
                 font-weight: 300;
                 color: black;
@@ -88,12 +91,11 @@
             }
 
             .column-card {
-
                 a {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    gap: 1rem;   
+                    gap: 1rem;
                 }
 
                 img {
@@ -103,20 +105,21 @@
         }
     }
 
+    // Forum Posts Section
     .forum-posts {
         .post-header {
             display: flex;
             gap: 20px;
-        
+
             .filter-btn {
                 cursor: pointer;
                 font-weight: bold;
                 transition: color 0.3s ease-in-out;
-        
+
                 &.active {
                     color: #ff4500; /* Highlight active filter */
                 }
-        
+
                 &:hover {
                     color: #cc3700;
                 }
@@ -125,9 +128,9 @@
 
         .forum-body {
             display: grid;
-            grid-template-columns: 3fr 1fr;
+            grid-template-columns: 3fr 1fr; /* Default layout: 3:1 split */
             gap: 2rem;
-        
+
             .posts-container {
                 display: flex;
                 flex-direction: column;
@@ -138,21 +141,20 @@
                     color: black;
                 }
 
-
                 .post-card {
                     background-color: lightgray;
                     border-radius: 0.5rem;
                     padding: 1rem;
                     display: flex;
                     flex-direction: column;
-        
+
                     p {
                         margin: 0.5rem 0;
                     }
 
                     .post-card-info {
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: row; /* Default: row layout */
                         align-items: center;
                         gap: 2rem;
 
@@ -168,17 +170,16 @@
                             flex-direction: column;
                         }
                     }
-        
+
                     .post-stats {
                         display: flex;
                         gap: 0.5rem;
-                        margin-top: 0.5rem;     
-                        margin-left: 5rem;                   
+                        margin-top: 0.5rem;
 
                         img {
                             height: 1rem;
                         }
-        
+
                         a {
                             display: flex;
                             flex-direction: row;
@@ -198,29 +199,28 @@
                     }
                 }
             }
-        
+
             .thread-card {
                 display: flex;
-                flex-direction: column;
+                flex-direction: column; /* Default: column layout */
                 gap: 1rem;
                 margin-inline: 4rem;
                 margin-top: 1rem;
-        
+
                 .post-thread {
                     background-color: lightgray;
                     border-radius: 1rem;
                     padding: 1rem;
                     display: flex;
                     justify-content: center;
-                    height: 10%;
-        
+
                     a {
                         display: flex;
                         flex-direction: row;
                         align-items: center;
                         text-decoration: none;
                         color: black;
-        
+
                         img {
                             height: 1.5rem;
                             margin-right: 0.5rem;
@@ -228,6 +228,61 @@
                     }
                 }
             }
-        }        
+        }
+    }
+
+    // Media Query for Responsiveness
+    @media screen and (max-width: 411px) {
+        .forum-hero-content {
+            h1 {
+                font-size: 2rem !important;
+                padding-inline: 0 !important;
+            }
+        }
+
+        .forum-hero-content input {
+            width: 100%; /* Adjust input width for smaller screens */
+        }
+
+        .forum-content {
+            .forum-info {
+                flex-direction: column; /* Stack info cards */
+                align-items: center; /* Center-align content */
+            }
+
+            .info-card {
+                flex-direction: column; /* Stack elements within the card */
+                align-items: center;
+            }
+        }
+
+        .forum-welcome {
+            grid-template-columns: 1fr; /* Single-column layout */
+        }
+
+        .forum-posts {
+            .forum-body {
+                grid-template-columns: 1fr; /* Single-column layout for posts and thread */
+            }
+
+            .posts-container {
+                .post-card {
+                    .post-card-info {
+                        flex-direction: column; /* Stack content vertically */
+                        text-align: center;
+                    }
+
+                    .post-stats {
+                        flex-direction: row; /* Stack stats vertically */
+                        justify-content: center;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .thread-card {
+                margin-inline: 0; /* Remove extra margins */
+            }
+        }
     }
 }

@@ -39,3 +39,27 @@
         }
       }      
 }
+
+// Media query for max-width 411px
+@media (max-width: 411px) {
+  .item-content {
+      grid-template-columns: 1fr; // Change to a single-column layout
+      gap: 1rem; // Add spacing between stacked elements
+
+      .item-deets {
+          align-items: center; // Center align form elements
+          width: 100%;
+
+          input, select {
+              width: 90%; // Adjust width for better fit on smaller screens
+          }
+      }
+
+      .upload-banner-container {
+          .banner-placeholder {
+              max-width: 90%; // Reduce max width for better responsiveness
+              height: 120px; // Reduce height slightly for smaller screens
+          }
+      }
+  }
+}
