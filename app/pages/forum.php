@@ -45,7 +45,7 @@ if (isset($_SESSION['online_users'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/styles.css">
+    <link rel="stylesheet" href="/dist/styles.css?v=2">
     <link rel="shortcut icon" href="/app/img/PUPLogo.png" type="image/x-icon">
     <title>Forum</title>
 </head>
@@ -84,7 +84,7 @@ if (isset($_SESSION['online_users'])) {
                 </div>
                 <div class="forum-card">
                     <div class="column-card">
-                        <a href="#">
+                        <a href="/app//pages/forum/generaldiscussion.php">
                             <img src="/app/img/icons8-inbox-96.png" alt="discussion">
                             <h3>General Discussion</h3>
                         </a>
