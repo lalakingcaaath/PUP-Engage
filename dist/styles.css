@@ -739,7 +739,7 @@ footer .copyright {
 }
 .checkout .checkout-final {
   background-color: lightgray;
-  padding: 2rem;
+  padding: 3rem;
 }
 .checkout .checkout-final .payment-unit {
   display: flex;
@@ -757,6 +757,15 @@ footer .copyright {
 }
 .checkout .checkout-final .payment-deets p span {
   margin-left: auto;
+}
+.checkout .remove-btn {
+  background-color: #800000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
 }
 .checkout button {
   padding: 0.5rem;
@@ -1580,7 +1589,7 @@ h2 {
 .general_discussion {
   font-family: "Inter", sans-serif;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 3rem auto;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
