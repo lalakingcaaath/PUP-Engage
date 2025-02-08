@@ -158,3 +158,43 @@ footer {
         }
     }
 }
+
+/* Tablet screen sizes (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .subheader {
+        nav ul {
+            justify-content: center;
+        }
+
+        ul li {
+            font-size: 1.2rem;
+            margin: 0.5rem 2rem;
+        }
+
+        ul li img {
+            width: 4rem;
+        }
+    }
+
+    table {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem 1rem;
+
+        .links {
+            margin: 0 auto;
+        }
+
+        .socmed {
+            text-align: left;
+        }
+
+        .copyright {
+            text-align: center;
+        }
+    }
+}

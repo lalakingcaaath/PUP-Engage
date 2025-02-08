@@ -83,3 +83,43 @@
         }
     }
 }
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .forum-announcements {
+        margin: 2rem 5rem; /* Adjust margin for tablets */
+
+        .forum-hero {
+            padding: 1.5rem;
+
+            .forum-hero-content {
+                h1 {
+                    font-size: 2rem; /* Slightly smaller for tablets */
+                }
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        .announcement-content {
+            margin-top: 1.5rem;
+
+            h1, h2 {
+                font-size: 1.8rem;
+            }
+
+            .announcement-card {
+                padding: 1.2rem; /* Adjust padding for better spacing */
+                font-size: 1rem;
+            }
+
+            ul {
+                padding-left: 1.2rem;
+
+                li {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -85,3 +85,26 @@
         }
     }
 }
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .search-store {
+        input[type="text"] {
+            width: 50%; /* Make the input wider for better usability */
+        }
+    }
+
+    .store-card {
+        grid-template-columns: repeat(3, 1fr) !important; /* Adjust to 3 columns for tablets */
+        margin: 1.5rem 3rem;
+
+        .store-item {
+            padding: 0.8rem; /* Slightly more padding than mobile */
+            
+            a {
+                img {
+                    width: 90%; /* Make images fit better */
+                }
+            }
+        }
+    }
+}

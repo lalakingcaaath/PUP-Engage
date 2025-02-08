@@ -131,11 +131,43 @@ footer .copyright {
     margin-top: 1rem;
   }
 }
+/* Tablet screen sizes (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .subheader nav ul {
+    justify-content: center;
+  }
+  .subheader ul li {
+    font-size: 1.2rem;
+    margin: 0.5rem 2rem;
+  }
+  .subheader ul li img {
+    width: 4rem;
+  }
+  table {
+    width: 90%;
+    margin-inline: auto;
+  }
+  footer {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 1rem;
+  }
+  footer .links {
+    margin: 0 auto;
+  }
+  footer .socmed {
+    text-align: left;
+  }
+  footer .copyright {
+    text-align: center;
+  }
+}
 .hero {
   position: relative;
   height: 100vh;
   display: grid;
   place-items: center;
+  /* Mobile Screens (max-width: 411px) */
+  /* Tablet Screens (600px - 1024px) */
 }
 .hero::before {
   content: "";
@@ -187,6 +219,25 @@ footer .copyright {
   .hero .hero-content button {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  .hero .hero {
+    height: 80vh; /* Reduce height to avoid overflow */
+  }
+  .hero .hero-content {
+    max-width: 80%; /* Limit width for better readability */
+    padding: 2rem;
+  }
+  .hero .hero-content h1 {
+    font-size: 2.5rem; /* Adjust heading size */
+  }
+  .hero .hero-content p {
+    font-size: 1.1rem; /* Slightly reduce paragraph size */
+  }
+  .hero .hero-content button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -252,7 +303,7 @@ footer .copyright {
 }
 .login .login-content .login-form {
   display: grid;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem;
   font-family: "Inter", sans-serif;
   background-color: white;
   width: 75%;
@@ -267,6 +318,7 @@ footer .copyright {
   padding: 0.5rem;
   border-radius: 0.25rem;
   border-color: lightgray;
+  width: 100%;
 }
 .login .login-content .login-form button {
   background-color: #800000;
@@ -282,6 +334,7 @@ footer .copyright {
   padding-bottom: 5rem;
 }
 
+/* Mobile View (max-width: 411px) */
 @media (max-width: 411px) {
   .header-login nav ul {
     flex-direction: column;
@@ -324,11 +377,85 @@ footer .copyright {
     font-size: 1rem;
   }
 }
+/* Tablet View (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .header-login nav ul {
+    flex-wrap: wrap; /* Prevents overflow */
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
+  }
+  .header-login ul li {
+    margin: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  .header-login ul li img {
+    width: 3.8rem;
+  }
+  .login {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .login .login-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 2rem;
+    max-width: 80%;
+    text-align: center;
+  }
+  .login .hero-text h2 {
+    font-size: 1.8rem;
+  }
+  .login .hero-text img {
+    width: 40%;
+  }
+  .login .login-form {
+    width: 90%;
+    max-width: 450px; /* Ensures form doesn't stretch */
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto; /* Centers the form */
+  }
+  .login .login-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .login .login-form form input[type=text],
+  .login .login-form form input[type=password] {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid lightgray;
+  }
+  .login .login-form button {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+    width: 100%;
+    background-color: #800000;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
+  }
+}
 .main-header nav ul {
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap; /* Prevents overflow */
+  justify-content: center; /* Centers items */
   align-items: center;
-  padding: 0;
+  padding: 0.5rem 1rem;
   margin: 0;
   list-style-type: none;
   width: 100%;
@@ -344,53 +471,23 @@ footer .copyright {
   color: white;
 }
 .main-header nav ul li {
-  margin: 0.5rem 1.5rem;
+  margin: 0.5rem 1rem;
 }
 .main-header nav ul li a {
   text-decoration: none;
   color: black;
   font-family: "Cinzel", serif;
   font-size: 1.1rem;
+  white-space: nowrap; /* Prevents text wrapping */
 }
 .main-header nav ul li img {
-  width: 4.5rem;
+  width: 4rem; /* Slightly reduced logo size */
 }
 
-.main-header nav ul {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  width: 100%;
-}
-.main-header nav ul li:first-child {
-  margin-right: auto;
-}
-.main-header nav ul li:nth-child(7) {
-  background-color: #800000;
-  padding: 0.5rem 1rem;
-}
-.main-header nav ul li:nth-child(7) a {
-  color: white;
-}
-.main-header nav ul li {
-  margin: 0.5rem 1.5rem;
-}
-.main-header nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-family: "Cinzel", serif;
-  font-size: 1.1rem;
-}
-.main-header nav ul li img {
-  width: 4.5rem;
-}
+/* Mobile Screens (max-width: 411px) */
 @media (max-width: 411px) {
   .main-header nav ul {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 1rem 0;
@@ -406,7 +503,26 @@ footer .copyright {
     width: 3.5rem;
   }
 }
-
+/* Tablet Screens (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .main-header nav ul {
+    flex-wrap: wrap; /* Ensures items stay within the screen */
+    justify-content: space-between; /* Distributes space evenly */
+    padding: 1rem 2rem;
+  }
+  .main-header nav ul li {
+    margin: 0.5rem; /* Reduce margins to prevent overflow */
+  }
+  .main-header nav ul li a {
+    font-size: 1.1rem;
+  }
+  .main-header nav ul li img {
+    width: 3.8rem;
+  }
+  .main-header nav ul li:nth-child(7) {
+    padding: 0.6rem 1rem;
+  }
+}
 .header-signup nav ul {
   display: flex;
   justify-content: flex-start;
@@ -632,6 +748,83 @@ footer .copyright {
   }
   .signup .signup-content .signup-form button {
     font-size: 1rem;
+  }
+}
+/* Tablet View (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .header-signup nav ul {
+    flex-wrap: wrap; /* Prevents overflow */
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
+  }
+  .header-signup ul li {
+    margin: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  .header-signup ul li img {
+    width: 3.8rem;
+  }
+  .signup {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .signup .signup-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 2rem;
+    max-width: 80%;
+    text-align: center;
+  }
+  .signup .hero-text h2 {
+    font-size: 1.8rem;
+  }
+  .signup .hero-text img {
+    width: 40%;
+  }
+  .signup .signup-form {
+    width: 90%;
+    max-width: 450px; /* Ensures form doesn't stretch */
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto; /* Centers the form */
+  }
+  .signup .signup-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .signup .signup-form form input[type=text],
+  .signup .signup-form form input[type=password] {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid lightgray;
+  }
+  .signup .signup-form form p {
+    font-size: 0.9rem;
+    color: #757575;
+  }
+  .signup .signup-form button {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+    width: 100%;
+    background-color: #800000;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
   }
 }
 .header-reset nav ul {
@@ -889,6 +1082,43 @@ footer .copyright {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1024px) {
+  .search-bar {
+    justify-content: center;
+    margin: 1rem 2rem;
+  }
+  .search-bar input[type=text] {
+    width: 50%;
+    font-size: 1rem;
+  }
+  .directory-header {
+    margin: 1rem 2rem;
+    text-align: center;
+  }
+  .directory-card {
+    grid-template-columns: repeat(2, 1fr) !important; /* Force two columns */
+    margin: 1.5rem;
+    gap: 1.5rem;
+  }
+  .directory-card .directory-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem;
+  }
+  .directory-card .directory-item img {
+    width: 100%; /* Make the image larger */
+    max-width: 250px; /* Prevents excessive stretching */
+  }
+  .up {
+    justify-content: center;
+    margin: 1rem;
+  }
+  .up button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.1rem;
+  }
+}
 .store {
   font-family: "Inter", sans-serif;
 }
@@ -957,6 +1187,21 @@ footer .copyright {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1024px) {
+  .search-store input[type=text] {
+    width: 50%; /* Make the input wider for better usability */
+  }
+  .store-card {
+    grid-template-columns: repeat(3, 1fr) !important; /* Adjust to 3 columns for tablets */
+    margin: 1.5rem 3rem;
+  }
+  .store-card .store-item {
+    padding: 0.8rem; /* Slightly more padding than mobile */
+  }
+  .store-card .store-item a img {
+    width: 90%; /* Make images fit better */
+  }
+}
 .product-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1120,6 +1365,42 @@ footer .copyright {
   }
   .desc-grp .desc-item a button {
     width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .product-page {
+    grid-template-columns: 1fr; /* Single column layout */
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+  .product-page .product-image {
+    width: 100%;
+    justify-content: center;
+  }
+  .product-page .product-details h1 {
+    font-size: 1.4rem;
+  }
+  .product-page .product-details .price {
+    font-size: 1.1rem;
+  }
+  .product-page .option-group .buttons {
+    flex-wrap: wrap;
+  }
+  .product-page .actions {
+    flex-direction: column; /* Stack buttons */
+  }
+  .product-page .actions .add-to-cart, .product-page .actions .buy-now {
+    width: 100%; /* Full-width buttons */
+  }
+  .desc-grp {
+    grid-template-columns: 1fr; /* Single column for tablets */
+    gap: 2rem;
+    margin: 3rem 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .desc-grp {
+    flex-direction: column;
   }
 }
 .cart {
@@ -1443,6 +1724,39 @@ footer .copyright {
     text-align: center;
   }
 }
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .main-content .content {
+    padding: 1.5rem;
+  }
+  .main-content .content .card {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1.5rem;
+  }
+  .sidenav .profile {
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .sidenav .profile img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .sidenav ul {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
 .main-content .content .search {
   display: flex;
   justify-content: center;
@@ -1521,6 +1835,26 @@ footer .copyright {
     height: 120px;
   }
 }
+@media (max-width: 1024px) {
+  .event-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .event-content .event-deets {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .event-content .event-deets input, .event-content .event-deets select {
+    width: 80%;
+  }
+  .event-content .upload-banner-container {
+    align-items: flex-start;
+  }
+  .event-content .upload-banner-container .banner-placeholder {
+    max-width: 80%;
+    height: 140px;
+  }
+}
 .item-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1573,6 +1907,26 @@ footer .copyright {
   .item-content .upload-banner-container .banner-placeholder {
     max-width: 90%;
     height: 120px;
+  }
+}
+@media (max-width: 1024px) {
+  .item-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .item-content .item-deets {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .item-content .item-deets input, .item-content .item-deets select {
+    width: 80%;
+  }
+  .item-content .upload-banner-container {
+    align-items: flex-start;
+  }
+  .item-content .upload-banner-container .banner-placeholder {
+    max-width: 80%;
+    height: 140px;
   }
 }
 .item-approval {
@@ -1939,6 +2293,47 @@ textarea {
   }
 }
 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .forum-hero {
+    height: 40vh;
+  }
+  .forum-hero .forum-hero-content h1 {
+    font-size: 2.5rem;
+    padding-inline: 3rem;
+  }
+  .forum-hero .forum-hero-content input {
+    width: 75%; /* Adjust input width */
+  }
+  .forum-content {
+    margin: 2rem 3rem;
+  }
+  .forum-content .forum-info {
+    flex-direction: column; /* Stack forum info cards */
+    align-items: center;
+  }
+  .forum-content .forum-info .info-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .forum-welcome {
+    grid-template-columns: repeat(2, 1fr); /* Change to two columns */
+    margin-bottom: 3rem;
+  }
+  .forum-posts .forum-body {
+    grid-template-columns: 1fr; /* Single-column layout */
+  }
+  .forum-posts .posts-container .post-card .post-card-info {
+    flex-direction: row; /* Keep horizontal layout */
+    align-items: center;
+  }
+  .forum-posts .posts-container .post-card .post-stats {
+    justify-content: center;
+  }
+  .forum-posts .thread-card {
+    margin-inline: 2rem;
+  }
+}
 .getting-started .getting-started-content {
   font-family: "Noto Sans", sans-serif;
   margin: 2rem 10rem;
@@ -2088,6 +2483,32 @@ textarea {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1024px) {
+  .create-thread {
+    margin: 2rem;
+  }
+  .create-thread .thread-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .create-thread .thread-title input {
+    width: 80%; /* Wider input but not full width */
+    font-size: medium;
+  }
+  .create-thread .thread-post textarea {
+    width: 80%; /* More space for typing */
+    font-size: medium;
+  }
+  .create-thread .thread-post input[type=file],
+  .create-thread .thread-post input[type=url] {
+    width: 80%;
+  }
+  .create-thread .highlight {
+    width: 80%;
+    text-align: center;
+  }
+}
 .profile-page {
   font-family: "Inter", sans-serif;
 }
@@ -2556,6 +2977,36 @@ h2 {
   }
 }
 
+@media (min-width: 600px) and (max-width: 1024px) {
+  .forum-announcements {
+    margin: 2rem 5rem; /* Adjust margin for tablets */
+  }
+  .forum-announcements .forum-hero {
+    padding: 1.5rem;
+  }
+  .forum-announcements .forum-hero .forum-hero-content h1 {
+    font-size: 2rem; /* Slightly smaller for tablets */
+  }
+  .forum-announcements .forum-hero .forum-hero-content p {
+    font-size: 1.1rem;
+  }
+  .forum-announcements .announcement-content {
+    margin-top: 1.5rem;
+  }
+  .forum-announcements .announcement-content h1, .forum-announcements .announcement-content h2 {
+    font-size: 1.8rem;
+  }
+  .forum-announcements .announcement-content .announcement-card {
+    padding: 1.2rem; /* Adjust padding for better spacing */
+    font-size: 1rem;
+  }
+  .forum-announcements .announcement-content ul {
+    padding-left: 1.2rem;
+  }
+  .forum-announcements .announcement-content ul li {
+    font-size: 1rem;
+  }
+}
 .modal {
   display: none; /* Hide modal by default */
   position: fixed;

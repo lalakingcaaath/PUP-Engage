@@ -20,28 +20,6 @@ $sql = "SELECT event_id, event_name, organizer_details, event_type, start_date, 
 $result = $conn->query($sql);
 ?>
 
-<?php
-// Start session if needed
-session_start();
-
-// Database connection
-$host = "localhost"; 
-$username = "root"; 
-$password = ""; 
-$database = "pup_engage"; 
-
-$conn = new mysqli($host, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch events from database
-$sql = "SELECT event_id, event_name, organizer_details, event_type, start_date, end_date FROM events ORDER BY start_date DESC";
-$result = $conn->query($sql);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -142,3 +142,43 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column; // Stack sidebar on top for tablets
+
+        .content {
+            padding: 1.5rem;
+
+            .card {
+                grid-template-columns: repeat(3, 1fr); // Adjust to 3 columns for better tablet view
+                gap: 1rem;
+            }
+        }
+    }
+
+    .sidenav {
+        width: 100%; // Full width sidebar for better spacing
+        height: auto;
+        position: relative;
+        padding: 1.5rem;
+        
+        .profile {
+            flex-direction: row; // Keep image and text in a row
+            gap: 1.5rem;
+            align-items: center;
+
+            img {
+                width: 4.5rem;
+                height: 4.5rem;
+            }
+        }
+
+        ul {
+            flex-direction: row; // Display menu in a row for tablets
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+    }
+}

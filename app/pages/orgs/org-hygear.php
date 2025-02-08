@@ -48,9 +48,6 @@
           </div>
         </div>
     </section>
-    <footer>
-        <p>&copy; 2025 Merchandise Store</p>
-    </footer>
 </body>
 </html>
 

@@ -286,3 +286,63 @@
         }
     }
 }
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .forum-hero {
+        height: 40vh;
+
+        .forum-hero-content {
+            h1 {
+                font-size: 2.5rem;
+                padding-inline: 3rem;
+            }
+
+            input {
+                width: 75%; /* Adjust input width */
+            }
+        }
+    }
+
+    .forum-content {
+        margin: 2rem 3rem;
+
+        .forum-info {
+            flex-direction: column; /* Stack forum info cards */
+            align-items: center;
+
+            .info-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+
+    .forum-welcome {
+        grid-template-columns: repeat(2, 1fr); /* Change to two columns */
+        margin-bottom: 3rem;
+    }
+
+    .forum-posts {
+        .forum-body {
+            grid-template-columns: 1fr; /* Single-column layout */
+        }
+
+        .posts-container {
+            .post-card {
+                .post-card-info {
+                    flex-direction: row; /* Keep horizontal layout */
+                    align-items: center;
+                }
+
+                .post-stats {
+                    justify-content: center;
+                }
+            }
+        }
+
+        .thread-card {
+            margin-inline: 2rem;
+        }
+    }
+}

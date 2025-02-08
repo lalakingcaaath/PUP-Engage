@@ -62,3 +62,28 @@
       }
   }
 }
+
+@media (max-width: 1024px) {
+    .event-content {
+        grid-template-columns: 1fr; // Stack elements in a single column for tablets
+        gap: 1.5rem; // Increase spacing slightly
+  
+        .event-deets {
+            align-items: flex-start; // Align elements to the left for better layout
+            width: 100%;
+  
+            input, select {
+                width: 80%; // Adjust width for better spacing
+            }
+        }
+  
+        .upload-banner-container {
+            align-items: flex-start; // Align upload section to the left
+            
+            .banner-placeholder {
+                max-width: 80%; // Adjust width for a balanced look on tablets
+                height: 140px; // Slightly bigger height for better visibility
+            }
+        }
+    }
+  }  
