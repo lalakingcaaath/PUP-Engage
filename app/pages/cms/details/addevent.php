@@ -55,6 +55,63 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+<?php
+// Start session if needed
+session_start();
+
+// Database connection (Update credentials if necessary)
+$host = "localhost"; // Change if using a remote server
+$username = "root"; // Default for Laragon
+$password = ""; // Default for Laragon
+$database = "pup_engage"; // Update with your actual database name
+
+$conn = new mysqli($host, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $eventName = $_POST['eventName'];
+    $eventDesc = $_POST['eventDesc'];
+    $eventType = $_POST['eventType'];
+    $orgDeets = $_POST['orgDeets'];
+    $startDate = $_POST['startDate'];
+    $endDate = $_POST['endDate'];
+    $startTime = $_POST['startTime'];
+    $endTime = $_POST['endTime'];
+    $venue = $_POST['venue'];
+
+    // Handle file upload
+    $bannerFileName = NULL;
+    if (!empty($_FILES['upload']['name'])) {
+        $targetDir = "/laragon/www/pup-engage/uploads/"; // Update path
+        $bannerFileName = basename($_FILES["upload"]["name"]);
+        $targetFilePath = $targetDir . $bannerFileName;
+        
+        // Move uploaded file to server directory
+        if (!move_uploaded_file($_FILES["upload"]["tmp_name"], $targetFilePath)) {
+            $bannerFileName = NULL; // Reset if upload fails
+        }
+    }
+
+    // Prepare & bind SQL statement
+    $stmt = $conn->prepare("INSERT INTO events (event_name, event_desc, event_type, organizer_details, start_date, end_date, start_time, end_time, venue_location, event_banner) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssssss", $eventName, $eventDesc, $eventType, $orgDeets, $startDate, $endDate, $startTime, $endTime, $venue, $bannerFileName);
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Event added successfully!');</script>";
+    } else {
+        echo "<script>alert('Error adding event: " . $conn->error . "');</script>";
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
