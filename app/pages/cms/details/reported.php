@@ -21,7 +21,7 @@
     <section class="main-content">
         <div class="sidenav">
             <div class="profile">
-                <img src="/app/img/tpg-logo.jpg" alt="logo">
+                <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/adminlogo.png" alt="logo">
                 <h2>Admin</h2>
             </div>
             <ul>

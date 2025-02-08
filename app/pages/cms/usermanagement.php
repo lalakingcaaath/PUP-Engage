@@ -56,7 +56,7 @@ if (isset($_SESSION['online_users'])) {
     <section class="main-content">
         <div class="sidenav">
             <div class="profile">
-                <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/tpg-logo.jpg" alt="logo">
+                <img src="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/img/adminlogo.png" alt="logo">
                 <h2>Admin</h2>
             </div>
             <ul>
@@ -78,9 +78,7 @@ if (isset($_SESSION['online_users'])) {
                 <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/cms/merchandiseapproval.php">
                     <li>Merchandise Approvals</li>
                 </a>
-                <a href="https://60c5-136-158-24-254.ngrok-free.app/pup-engage/app/pages/cms/report.php">
-                    <li>Reports</li>
-                </a>
+
             </ul>
         </div>
         <div class="content">
