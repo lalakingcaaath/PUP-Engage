@@ -43,9 +43,6 @@
                 <a href="/app/pages/cms/merchandiseapproval.php">
                     <li>Merchandise Approvals</li>
                 </a>
-                <a href="/app/pages/cms/report.php">
-                    <li>Reports</li>
-                </a>
             </ul>
         </div>
         <div class="content">

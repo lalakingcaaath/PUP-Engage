@@ -78,9 +78,6 @@ if (isset($_SESSION['online_users'])) {
                 <a href="/app/pages/cms/merchandiseapproval.php">
                     <li>Merchandise Approvals</li>
                 </a>
-                <a href="/app/pages/cms/report.php">
-                    <li>Reports</li>
-                </a>
             </ul>
         </div>
         <div class="content">

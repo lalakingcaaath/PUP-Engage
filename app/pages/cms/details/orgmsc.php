@@ -86,7 +86,6 @@ $members_result = $conn->query($members_query);
                 <a href="/app/pages/cms/eventmanagement.php"><li>Event Management</li></a>
                 <a href="/app/pages/cms/forummoderation.php"><li>Forum Moderation</li></a>
                 <a href="/app/pages/cms/merchandiseapproval.php"><li>Merchandise Approvals</li></a>
-                <a href="/app/pages/cms/report.php"><li>Reports</li></a>
             </ul>
         </div>
 

@@ -1,3 +1,60 @@
+<?php
+// Start session if needed
+session_start();
+
+// Database connection (Update credentials if necessary)
+$host = "localhost"; // Change if using a remote server
+$username = "root"; // Default for Laragon
+$password = ""; // Default for Laragon
+$database = "pup_engage"; // Update with your actual database name
+
+$conn = new mysqli($host, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $eventName = $_POST['eventName'];
+    $eventDesc = $_POST['eventDesc'];
+    $eventType = $_POST['eventType'];
+    $orgDeets = $_POST['orgDeets'];
+    $startDate = $_POST['startDate'];
+    $endDate = $_POST['endDate'];
+    $startTime = $_POST['startTime'];
+    $endTime = $_POST['endTime'];
+    $venue = $_POST['venue'];
+
+    // Handle file upload
+    $bannerFileName = NULL;
+    if (!empty($_FILES['upload']['name'])) {
+        $targetDir = "/laragon/www/pup-engage/uploads/"; // Update path
+        $bannerFileName = basename($_FILES["upload"]["name"]);
+        $targetFilePath = $targetDir . $bannerFileName;
+        
+        // Move uploaded file to server directory
+        if (!move_uploaded_file($_FILES["upload"]["tmp_name"], $targetFilePath)) {
+            $bannerFileName = NULL; // Reset if upload fails
+        }
+    }
+
+    // Prepare & bind SQL statement
+    $stmt = $conn->prepare("INSERT INTO events (event_name, event_desc, event_type, organizer_details, start_date, end_date, start_time, end_time, venue_location, event_banner) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssssss", $eventName, $eventDesc, $eventType, $orgDeets, $startDate, $endDate, $startTime, $endTime, $venue, $bannerFileName);
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Event added successfully!');</script>";
+    } else {
+        echo "<script>alert('Error adding event: " . $conn->error . "');</script>";
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,27 +82,13 @@
                 <h2>Admin</h2>
             </div>
             <ul>
-                <a href="/app/pages/cms/dashboard.php">
-                    <li>Dashboard</li>
-                </a>
-                <a href="/app/pages/cms/usermanagement.php">
-                    <li>User Management</li>
-                </a>
-                <a href="/app/pages/cms/orgmanagement.php">
-                    <li>Organization Management</li>
-                </a>
-                <a href="/app/pages/cms/eventmanagement.php">
-                    <li>Event Management</li>
-                </a>
-                <a href="/app/pages/cms/forummoderation.php">
-                    <li>Forum Moderation</li>
-                </a>
-                <a href="/app/pages/cms/merchandiseapproval.php">
-                    <li>Merchandise Approvals</li>
-                </a>
-                <a href="/app/pages/cms/report.php">
-                    <li>Reports</li>
-                </a>
+                <a href="dashboard.php"><li>Dashboard</li></a>
+                <a href="usermanagement.php"><li>User Management</li></a>
+                <a href="orgmanagement.php"><li>Organization Management</li></a>
+                <a href="eventmanagement.php"><li>Event Management</li></a>
+                <a href="forummoderation.php"><li>Forum Moderation</li></a>
+                <a href="merchandiseapproval.php"><li>Merchandise Approvals</li></a>
+                <a href="report.php"><li>Reports</li></a>
             </ul>
         </div>
         <div class="content">
@@ -53,63 +96,52 @@
                 <img src="/app/img/icons8-person-96.png" alt="dashboard">
                 <h2>Event Management</h2>
             </div>
-            <div class="event-content">
-                <div class="event-deets">
-                    <label for="eventName">Event Name</label>
-                    <input type="text" name="eventName" id="eventName" placeholder="Event Name">
-                    <label for="eventDesc">Event Description</label>
-                    <input type="text" name="eventDesc" id="eventDesc" placeholder="Event Description">
-                    <label for="eventType">Event Type</label>
-                    <select name="eventType" id="eventType">
-                        <option value="Online">Online</option>
-                        <option value="Physical">Physical</option>
-                    </select>                    
-                    <label for="orgDeets">Organizer Details</label>
-                    <input type="text" name="orgDeets" id="orgDeets" placeholder="Organizer Details">
-                    <label for="startDate">Start Date</label>
-                    <input type="date" name="startDate" id="startDate">
-                    <label for="endDate">End Date</label>
-                    <input type="date" name="endDate" id="endDate">
-                    <label for="startTime">Start Time</label>
-                    <input type="time" name="startTime" id="startTime">
-                    <label for="endTime">End Time</label>
-                    <input type="time" name="endTime" id="endTime">
-                    <label for="venue">Venue Location</label>
-                    <input type="text" name="venue" id="venue" placeholder="Virtual Meeting URL/Location">
-                </div>
-                <div class="upload-banner-container">
-                    <div class="banner-placeholder">
-                        <input type="file" name="upload" id="upload">
-                        <img src="https://via.placeholder.com/40" alt="Upload Icon" class="upload-icon" />
+            <form method="POST" action="" enctype="multipart/form-data">
+                <div class="event-content">
+                    <div class="event-deets">
+                        <label for="eventName">Event Name</label>
+                        <input type="text" name="eventName" id="eventName" required>
+                        
+                        <label for="eventDesc">Event Description</label>
+                        <input type="text" name="eventDesc" id="eventDesc" required>
+                        
+                        <label for="eventType">Event Type</label>
+                        <select name="eventType" id="eventType" required>
+                            <option value="Online">Online</option>
+                            <option value="Physical">Physical</option>
+                        </select>                    
+                        
+                        <label for="orgDeets">Organizer Details</label>
+                        <input type="text" name="orgDeets" id="orgDeets" required>
+                        
+                        <label for="startDate">Start Date</label>
+                        <input type="date" name="startDate" id="startDate" required>
+                        
+                        <label for="endDate">End Date</label>
+                        <input type="date" name="endDate" id="endDate" required>
+                        
+                        <label for="startTime">Start Time</label>
+                        <input type="time" name="startTime" id="startTime" required>
+                        
+                        <label for="endTime">End Time</label>
+                        <input type="time" name="endTime" id="endTime" required>
+                        
+                        <label for="venue">Venue Location</label>
+                        <input type="text" name="venue" id="venue" required>
                     </div>
-                    <p>Upload Event Banner</p>
-                  </div>
-            </div>
-            <button class="highlight">Add event</button>
+                    <div class="upload-banner-container">
+                        <div class="banner-placeholder">
+                            <input type="file" name="upload" id="upload" accept="image/*">
+                            <img src="https://via.placeholder.com/40" alt="Upload Icon" class="upload-icon" />
+                        </div>
+                        <p>Upload Event Banner</p>
+                    </div>
+                </div>
+                <button type="submit" class="highlight">Add event</button>
+            </form>
         </div>
     </section>
-    <footer>
-        <div class="links">
-            <ul>
-                <li>Quick Links</li>
-                <li><a href="/app/pages/directory.php">Organization Directory</a></li>
-                <li><a href="/app/pages/generalcalendar.php">Event Calendar</a></li>
-                <li><a href="/app/pages/forum.php">Forum</a></li>
-                <li><a href="/app/pages/store/store.php">Mechandise Store</a></li>
-                <li><a href="/app/pages/about.php">About Us</a></li>
-            </ul>
-        </div>
-        <div class="socmed">
-            <p class="touch">Keep in touch</p>
-            <a href="https://www.facebook.com/ThePUPOfficial"><img src="/app/img/icons8-facebook-logo-50.png" alt="facebook"></a>
-            <a href="https://x.com/ThePUPOfficial"><img src="/app/img/icons8-twitter-50.png" alt="twitter"></a>
-            <a href="https://www.youtube.com/user/pupcreatv"><img src="/app/img/icons8-youtube-50.png" alt="youtube"></a>
-            <a href="https://www.linkedin.com/school/polytechnic-university-of-the-philippines/posts/?feedView=all"><img src="/app/img/icons8-linkedin-50.png" alt="linkedin"></a>
-            <p class="info">PUP Contact Information</p>
-            <p>Phone: <span>(+63 2) 5335-1PUP (5335-1787) or 5335-1777</span></p>
-            <p>Email: <span>inquire@pup.edu.ph</span></p>
-        </div>
-        <p class="copyright">&copy; 2024 PUP Engage. All rights reserved</p>
-    </footer>
 </body>
 </html>
+
+<?php include '/laragon/www/pup-engage/app/components/footer.php'; ?>
